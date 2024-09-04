@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Leasing Form</title>
+    </head>
+    <body>
+        <img src="/images/noroot.jpg" alt="Logo" width="400">
+        <nav>
+            <a href ="#About us">About us</a>
+            <a href="#Services">Services</a>
+            <a href="#Contacts">Contacts</a>
+
+            <a href = "#Rus">Rus</a>
+        </nav>
+        <h1>Leasing form</h1>
+        <form action="submit">
+            <div class="pers-data-container">
+                Email<br>
+                <input type="text" name="email" id="email" placeholder="Your email">
+                <br>
+                Name<br>
+                <input type="text" name="name" id="name" placeholder="Your full name">
+                <br>
+                Phone<br>
+                <input type="text" name="phone" id="phone" placeholder="Your phone number">
+                <br>
+            </div>
+            <br>
+            <div class="option-container">
+                Choose type of residence<br><br>
+                <div class="option">
+                    <input type="radio" name="options" id="house" value="1">
+                    <label for="house">
+                        <img src="/images/detached-house.jpg" alt="Detached House" width="100" height="100">
+                        <br>
+                        Detached House<br><br>
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="options" id="apartment" value="2">
+                    <label for="apartment">
+                        <img src="/images/apartment.webp" alt="Apartment" width="100" height="100">
+                        <br>
+                        Apartment<br><br>
+                    </label>
+                </div>
+            </div>
+            <div class="desired-area">
+                Desired area range<br>
+                <label for="desired-area-min">
+                    From
+                    <input type="number" name="desired-area-min" id="desired-area-min" step="0.01" placeholder="Min, sq m">
+                </label>
+                <label for="desired-area-max">
+                    To
+                    <input type="number" name="desired-area-max" id="desired-area-max" step="0.01" placeholder="Max, sq m">
+                </label>
+                <br>
+                <br>
+            </div>
+            <div class="room-container">
+                How many rooms do You want ?
+                <div class="room">
+                    <input type="checkbox" id="room1" name="rooms" value="1">
+                    <label for="room1">1</label>
+                </div>
+                <div class="room">
+                    <input type="checkbox" id="room2" name="rooms" value="2">
+                    <label for="room2">2</label>
+                </div>
+                <div class="room">
+                    <input type="checkbox" id="room3" name="room" value="3">
+                    <label for="room3">3</label>
+                </div>
+                <div class="room">
+                    <input type="checkbox" id="room4" name="room" value="4">
+                    <label for="room4">4</label>
+                </div>
+                <div class="room">
+                    <input type="checkbox" id="room5" name="room" value="5">
+                    <label for="room5">5</label>
+                </div>
+                <div class="room">
+                    <input type="checkbox" id="room6" name="room" value="6">
+                    <label for="room6">6</label>
+                </div>
+                <div class="room">
+                    <input type="checkbox" id="room7" name="room" value="6+">
+                    <label for="room7">6+</label>
+                </div>
+                <br>
+            </div>
+            <div class="desired-price">
+                Desired renting price range<br>
+                <label for="desired-price-min">
+                    From
+                    <input type="number" name="desired-price" id="desired-price-min" step="0.01" placeholder="Min, USD $">
+                </label>
+                <label for="desired-area-max">
+                    To
+                    <input type="number" name="desired-price" id="desired-price-max" step="0.01" placeholder="Max, USD $">
+                </label>
+                <br>
+                <br>
+            </div>
+            <div class="comments">
+                <label for="comment">
+                    Comments<br>
+                </label>
+                <textarea id="comment" name="comment" rows="6" cols="60" placeholder="Leave Your comment"></textarea>
+            </div>
+            <br><br>
+            <input type="submit" value="Confirm">
+        </form>
+    </body>
+</html>
