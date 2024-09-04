@@ -15,26 +15,34 @@
     </nav>
     <h1>Realisation form</h1>
     <form action="submit">
-        Email<br>
-        <input type="text" name="email" id="email" value="Your email">
-        Name<br>
-        <input type="text" name="name" id="name" value="Your full name">
-        Phone<br>
-        <input type="text" name="phone" id="phone" value="Your phone number">
+        <div class="pers-data-container">
+            Email<br>
+            <input type="text" name="email" id="email" placeholder="Your email">
+            <br>
+            Name<br>
+            <input type="text" name="name" id="name" placeholder="Your full name">
+            <br>
+            Phone<br>
+            <input type="text" name="phone" id="phone" placeholder="Your phone number">
+            <br>
+        </div>
+        <br>
         <div class="option-container">
-            Choose type of your residence<br>
+            Choose type of your residence<br><br>
             <div class="option">
                 <input type="radio" name="options" id="house" value="1">
                 <label for="house">
                     <img src="/images/detached-house.jpg" alt="Detached House" width="100" height="100">
-                    Detached House
+                    <br>
+                    Detached House<br><br>
                 </label>
             </div>
             <div class="option">
                 <input type="radio" name="options" id="apartment" value="2">
                 <label for="apartment">
                     <img src="/images/apartment.webp" alt="Apartment" width="100" height="100">
-                    Apartment
+                    <br>
+                    Apartment<br><br>
                 </label>
             </div>
         </div>
@@ -42,19 +50,22 @@
             <label for="area">
                 Area<br>
             </label>
-            <input type="text" name="area" id="area" value="Area">
+            <input type="number" name="area" id="area" step="0.01" placeholder="Area">
+            <br><br>
         </div>
         <div class="rooms">
             <label for="rooms">
-                Number of rooms
+                Number of rooms<br>
             </label>
-            <input type="text" name="rooms" id="rooms" value="Number of rooms">
+            <input type="number" name="rooms" id="rooms" step="1" placeholder="Number of rooms">
+            <br><br>
         </div>
         <div class="price">
             <labe for="price">
-                Price
+                Price<br>
             </labe>
-            <input type="text" name="price" id="price" value="Price">
+            <input type="number" name="price" id="price" step="0.01" placeholder="Price">
+            <br><br>
         </div>
         <div class="description">
             <label for="description">
