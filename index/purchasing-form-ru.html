@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма покупки</title>
+</head>
+<body>
+    <header>
+        <img src="../images/image.png" alt="Наш логотип" width="400"/>
+        <nav>
+            <a href="properties-pavilion-ru.html">О нас</a>
+            <a href="properties-pavilion-ru.html">Услуги</a>
+            <a href="properties-pavilion-ru.html">Контакты</a>
+            <a href="purchasing-form-en.html">Eng</a>
+            <a href="purchasing-form-kz.html">Kaz</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Форма покупки</h1>
+        <form action="submit">
+            <section class="pers-data-container">
+                <label for="email">Электронная почта</label><br>
+                <input type="email" name="email" id="email" placeholder="Ваш email"><br>
+
+                <label for="name">Имя</label><br>
+                <input type="text" name="name" id="name" placeholder="Ваше полное имя"><br>
+
+                <label for="phone">Телефон</label><br>
+                <input type="tel" name="phone" id="phone" placeholder="Ваш номер телефона"><br>
+            </section>
+            <section class="option-container">
+                <h2>Выберите тип жилья</h2>
+                <div class="option">
+                    <input type="radio" name="options" id="house" value="1">
+                    <label for="house">
+                        <img src="/images/detached-house.jpg" alt="Отдельный дом" width="100" height="100"><br>
+                        Отдельный дом
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="options" id="apartment" value="2">
+                    <label for="apartment">
+                        <img src="/images/apartment.webp" alt="Квартира" width="100" height="100"><br>
+                        Квартира
+                    </label>
+                </div>
+            </section>
+            <section class="desired-area">
+                <h2>Желаемая площадь</h2>
+                <label for="desired-area-min">От</label>
+                <input type="number" name="desired-area-min" id="desired-area-min" step="0.01" placeholder="Мин, кв м">
+
+                <label for="desired-area-max">До</label>
+                <input type="number" name="desired-area-max" id="desired-area-max" step="0.01" placeholder="Макс, кв м"><br>
+            </section>
+            <section class="room-container">
+                <label for="rooms">Сколько комнат вам нужно?</label>
+                <select name="room" id="rooms">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="6+">6+</option>
+                </select><br>
+            </section>
+            <section class="desired-price">
+                <h2>Желаемый диапазон цен</h2>
+                <label for="desired-price-min">От</label>
+                <input type="number" name="desired-price" id="desired-price-min" step="0.01" placeholder="Мин, USD $">
+
+                <label for="desired-price-max">До</label>
+                <input type="number" name="desired-price" id="desired-price-max" step="0.01" placeholder="Макс, USD $"><br>
+            </section>
+            <section class="comments">
+                <label for="comment">Комментарии</label><br>
+                <textarea id="comment" name="comment" rows="6" cols="60" placeholder="Оставьте ваш комментарий"></textarea>
+            </section>
+            <input type="submit" value="Подтвердить">
+        </form>
+    </main>
+    <footer>
+        <p>Создано: Ерхан Ахмет, Бахтияр Баизулла, Ернар Касен</p>
+        <p>Дата: Сентябрь 2024</p>
+    </footer>
+</body>
+</html>

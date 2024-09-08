@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <title>Сату формасы</title>
+</head>
+<body>
+    <header>
+        <img src="../images/image.png" alt="Біздің логотип" width="400"/>
+        <nav>
+            <a href="properties-pavilion-kz.html">Біз туралы</a>
+            <a href="properties-pavilion-kz.html">Қызметтер</a>
+            <a href="properties-pavilion-kz.html">Байланыс</a>
+            <a href="selling-form-en.html">Eng</a>
+            <a href="selling-form-ru.html">Rus</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Сату формасы</h1>
+        <form action="submit">
+            <section class="pers-data-container">
+                <label for="email">Электрондық пошта</label><br>
+                <input type="email" name="email" id="email" placeholder="Сіздің email"><br>
+
+                <label for="name">Аты-жөні</label><br>
+                <input type="text" name="name" id="name" placeholder="Толық аты-жөніңіз"><br>
+
+                <label for="phone">Телефон</label><br>
+                <input type="tel" name="phone" id="phone" placeholder="Сіздің телефон нөміріңіз"><br>
+            </section>
+            <section class="option-container">
+                <h2>Тұрғын үй түрін таңдаңыз</h2>
+                <div class="option">
+                    <input type="radio" name="options" id="house" value="1">
+                    <label for="house">
+                        <img src="/images/detached-house.jpg" alt="Бөлек үй" width="100" height="100"><br>
+                        Бөлек үй
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="options" id="apartment" value="2">
+                    <label for="apartment">
+                        <img src="/images/apartment.webp" alt="Пәтер" width="100" height="100"><br>
+                        Пәтер
+                    </label>
+                </div>
+            </section>
+            <section class="area">
+                <label for="area">Аумақ</label><br>
+                <input type="number" name="area" id="area" step="0.01" placeholder="Аумақ"><br>
+            </section>
+            <section class="rooms">
+                <label for="rooms">Бөлмелер саны</label><br>
+                <input type="number" name="rooms" id="rooms" step="1" placeholder="Бөлмелер саны"><br>
+            </section>
+            <section class="price">
+                <label for="price">Бағасы</label><br>
+                <input type="number" name="price" id="price" step="0.01" placeholder="Бағасы"><br>
+            </section>
+            <section class="description">
+                <label for="description">Сипаттама</label><br>
+                <textarea id="description" name="description" rows="6" cols="60" placeholder="Тұрғын үйіңізді сипаттаңыз"></textarea>
+            </section>
+            <input type="submit" value="Растау">
+        </form>
+    </main>
+    <footer>
+        <p>Жасалған: Ерхан Ахмет, Бахтияр Баизулла, Ернар Касен</p>
+        <p>Күні: Қыркүйек 2024</p>
+    </footer>
+</body>
+</html>
