@@ -13,3 +13,14 @@
     font-family: "Comic Sans MS";
     margin-left: 23px;
 }
+nav {
+    background-color: #FFFFFF;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
