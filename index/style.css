@@ -1,5 +1,11 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .navigation {
     text-align: right;
+    display: flex;
 }
 .nav-font {
     text-decoration: none;
