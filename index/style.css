@@ -40,6 +40,10 @@ nav {
     font-weight: bold;
 }
 
+nav a:hover {
+    color: #3498db;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -53,4 +57,47 @@ nav {
 
 body {
     animation: fadeIn 1s ease-in-out;
+    font-family: 'Arial', sans-serif;
+    color: #333;
 }
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+a {
+    color: #2980b9;
+}
+
+h1, h2{
+    margin-bottom: 20px;
+}
+
+p{
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #7f8c8d;
+    border-left: 4px solid #3498db;
+    padding-left: 15px;
+    transition: transform 0.5s ease;
+}
+
+.quote:hover {
+    transform: scale(1.00);
+}
+
+.map {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
