@@ -51,6 +51,11 @@ nav {
     }
 }
 
+.logo {
+    display: block;
+    margin-top: 20px;
+}
+
 body {
     animation: fadeIn 1s ease-in-out;
 }
