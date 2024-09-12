@@ -51,46 +51,6 @@ nav {
     }
 }
 
-.logo {
-    display: block;
-    margin-top: 20px;
-}
-
 body {
     animation: fadeIn 1s ease-in-out;
-}
-.service-buttons {
-    text-align: center;
-}
-
-.buy {
-    position: relative;
-    background-image: url('../images/Merchendise.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    color: #ffffff;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-    padding: 140px 160px;
-    z-index: 1;
-    transition: transform 0.8s ease;
-    overflow: hidden;
-
-}
-.buy::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-    border-radius: inherit;
-}
-.buy:hover {
-    transform: scale(150%);
 }
