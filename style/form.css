@@ -104,6 +104,7 @@ footer {
     display: flex;
     justify-content: center; /* Центрирование по горизонтали */
     align-items: center;
+    flex-direction: column;
 }
 
 .option-container {
