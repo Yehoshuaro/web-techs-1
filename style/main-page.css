@@ -1,6 +1,6 @@
 body {
     animation: fadeIn 1s ease-in-out;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Calibri Light', sans-serif;
     color: #333;
     width: 100%;
 }
@@ -247,6 +247,103 @@ button:hover {
     margin-top: 50px;
     margin-right: 50px;
     padding-left: 50px;
-
 }
 
+
+.service-buttons {
+    text-align: center;
+}
+.buy {
+    position: relative;
+    background-image: url('../images/Merchendise.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    padding: 140px 160px;
+    z-index: 1;
+    transition: transform 0.8s ease;
+    overflow: hidden;
+
+}
+.buy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    border-radius: inherit;
+}
+.buy:hover {
+    transform: scale(150%);
+}
+
+.sell{
+    position: relative;
+    background-image: url('../images/purchase.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    padding: 140px 160px;
+    z-index: 1;
+    transition: transform 0.8s ease;
+    overflow: hidden;
+
+}
+.sell::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    border-radius: inherit;
+}
+.sell:hover {
+    transform: scale(150%);
+}
+
+.lease{
+    position: relative;
+    background-image: url('../images/lease.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    padding: 140px 160px;
+    z-index: 1;
+    transition: transform 0.8s ease;
+    overflow: hidden;
+}
+.lease::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    border-radius: inherit;
+}
+.lease:hover {
+    transform: scale(150%);
+}
