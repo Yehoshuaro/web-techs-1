@@ -266,7 +266,7 @@ button:hover {
     text-align: center;
     padding: 140px 160px;
     z-index: 1;
-    transition: transform 0.8s ease;
+    transition: background-size 0.8s ease;
     overflow: hidden;
 
 }
@@ -282,7 +282,7 @@ button:hover {
     border-radius: inherit;
 }
 .buy:hover {
-    transform: scale(150%);
+    transform: scale(100%);
 }
 
 .sell{
@@ -298,7 +298,7 @@ button:hover {
     text-align: center;
     padding: 140px 160px;
     z-index: 1;
-    transition: transform 0.8s ease;
+    transition: background-size 0.8s ease;
     overflow: hidden;
 
 }
@@ -314,7 +314,7 @@ button:hover {
     border-radius: inherit;
 }
 .sell:hover {
-    transform: scale(150%);
+    transform: scale(100%);
 }
 
 .lease{
@@ -330,7 +330,7 @@ button:hover {
     text-align: center;
     padding: 140px 160px;
     z-index: 1;
-    transition: transform 0.8s ease;
+    transition: background-size 0.8s ease;
     overflow: hidden;
 }
 .lease::before {
@@ -345,5 +345,5 @@ button:hover {
     border-radius: inherit;
 }
 .lease:hover {
-    transform: scale(150%);
+    transform: scale(100%);
 }
