@@ -4,21 +4,27 @@ body {
     color: #333;
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between; /* Растягиваем содержимое */
     align-items: center;
     height: 100vh;
     margin: 0;
-    flex-direction: column; /* Добавлено для вертикального расположения */
 }
 
 header {
     background-color: #fff;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between; /* Центрирование по горизонтали */
+    justify-items: center;
+    flex-direction: column;
+    justify-content: space-around; /* Центрирование по горизонтали */
     align-items: center;
     border-bottom: 1px solid #ccc;
     width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень для видимости */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header img {
@@ -38,13 +44,19 @@ nav a {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
     width: 100%;
     max-width: 600px;
+    flex-grow: 1; /* Заполняем оставшееся пространство */
 }
 
 h1, h2 {
     color: #000;
+    text-align: center;
 }
 
 form {
@@ -53,6 +65,7 @@ form {
     padding-right: 40px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 label {
@@ -86,8 +99,8 @@ footer {
     padding: 10px 20px;
     text-align: center;
     border-top: 1px solid #ccc;
-    margin-top: 20px;
     width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень для футера */
     display: flex;
     justify-content: center; /* Центрирование по горизонтали */
     align-items: center;
@@ -102,6 +115,8 @@ footer {
 
 .option {
     text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .logo {
