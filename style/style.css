@@ -2,6 +2,7 @@ body {
     animation: fadeIn 1s ease-in-out;
     font-family: 'Arial', sans-serif;
     color: #333;
+    width: 100%;
 }
 
 h1, h2, h3 {
@@ -186,5 +187,66 @@ button:hover {
     z-index: 2;
     text-align: center;
     color: black;
-    padding-top: 100px;
+    padding: 20px;
+    margin: 20px 0;
 }
+
+.content p {
+    margin-bottom: 20px;
+    margin-right: 50px;
+}
+
+.content h2 {
+    margin-bottom: 30px;
+    margin-right: 50px;
+}
+
+.home-container {
+    background-image: url("../images/home-background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.home-caption {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("../images/company-in-numbers.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 40px;
+}
+
+.stats {
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-right: 50px;
+    padding-left: 50px;
+
+}
+
