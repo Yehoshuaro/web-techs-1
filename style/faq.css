@@ -62,14 +62,13 @@ nav a {
 .question-container details {
     margin-top: 30px;
     margin-right: 100px;
-    background-color: #f5f3eb;
+    background-color: #edf4fd;
     padding: 20px
 }
 .question-container summary{
     font-family: "Calibri Light";
     font-size: 30px;
     position: relative;
-    width: max-content;
 }
 .question-container summary::after {
     content: "";
