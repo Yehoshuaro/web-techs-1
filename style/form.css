@@ -1,6 +1,10 @@
+* {
+    font-family: 'Calibri Light', sans-serif;
+    font-size: 1.2rem;
+}
+
 body {
     animation: fadeIn 1s ease-in-out;
-    font-family: 'Arial', sans-serif;
     color: #333;
     width: 100%;
     display: flex;
