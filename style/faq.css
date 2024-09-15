@@ -5,11 +5,11 @@ header {
     display: flex;
     justify-items: center;
     flex-direction: column;
-    justify-content: space-around; /* Центрирование по горизонтали */
+    justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid #ccc;
     width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень для видимости */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;

@@ -9,7 +9,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Растягиваем содержимое */
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
     margin: 0;
@@ -21,11 +21,11 @@ header {
     display: flex;
     justify-items: center;
     flex-direction: column;
-    justify-content: space-around; /* Центрирование по горизонтали */
+    justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid #ccc;
     width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень для видимости */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -45,6 +45,8 @@ nav a {
     color: #000;
     text-decoration: none;
     font-weight: bold;
+    font-size: 16px;
+    font-family: "Calibri Light";
 }
 
 main {
@@ -55,7 +57,7 @@ main {
     padding: 20px;
     width: 100%;
     max-width: 600px;
-    flex-grow: 1; /* Заполняем оставшееся пространство */
+    flex-grow: 1;
 }
 
 h1, h2 {
@@ -104,9 +106,9 @@ footer {
     text-align: center;
     border-top: 1px solid #ccc;
     width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень для футера */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center; /* Центрирование по горизонтали */
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
