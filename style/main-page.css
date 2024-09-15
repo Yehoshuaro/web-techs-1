@@ -49,23 +49,19 @@ body {
     width: 100%;
 }
 
-h1, h2, h3 {
+h1, h2, h3{
     color: #2c3e50;
     margin-bottom: 20px;
 }
-
-
-p {
+p{
     line-height: 1.6;
     margin-bottom: 15px;
 }
-
-a {
+a{
     color: #2980b9;
     text-decoration: none;
 }
-
-a:hover {
+a:hover{
     color: #3498db;
 }
 
@@ -87,7 +83,6 @@ a:hover {
     font-size: 40px;
     font-family: Arial;
 }
-
 .purchasing-title p {
     font-size: 20px;
     font-family: "Courier New";
@@ -99,11 +94,9 @@ a:hover {
     justify-content: space-around;
     margin-top: 50px;
 }
-
 .stat h2 {
     font-size: 48px;
 }
-
 .stat p {
     font-size: 18px;
 }
@@ -120,35 +113,58 @@ button:hover {
     padding-left: 15px;
     transition: transform 0.5s ease;
 }
-
 .quote:hover {
     transform: scale(1.00);
 }
 
-.map {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+.about-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 50px 0;
 }
+.about-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+}
+.about-title{
+    flex: 0 0 30%;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-left: 20px;
+}
+.about-text{
+    flex: 1;
+    max-width: 40%;
+    font-size: 18px;
+    line-height: 2;
+    text-align: justify;
+    margin-right: 60px;
+}
+
+
 
 .benefits-section {
     text-align: center;
     padding: 50px;
     background-color: #ffffff;
+    margin-top: 50px;
 }
-
 .benefits-section h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
     color: #333;
 }
-
 .benefits-container {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
 }
-
 .benefit {
     max-width: 300px;
     padding: 20px;
@@ -157,29 +173,28 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-
 .benefit img {
     width: 80px;
     height: auto;
     margin-bottom: 20px;
 }
-
 .benefit h3 {
     font-size: 1.5rem;
     color: #2e86de;
     margin-bottom: 10px;
 }
-
 .benefit p {
     font-size: 1rem;
     color: #666;
 }
 
+
+
 .section {
     position: relative;
     height: 100vh;
+    margin-top: 50px;
 }
-
 .section::before {
     content: "";
     position: absolute;
@@ -190,7 +205,6 @@ button:hover {
     background: rgba(255, 255, 255, 0.7);
     z-index: 1;
 }
-
 .background-image {
     position: absolute;
     top: 0;
@@ -201,7 +215,6 @@ button:hover {
     opacity: 0.7;
     z-index: 1;
 }
-
 .content {
     position: relative;
     z-index: 2;
@@ -215,12 +228,10 @@ button:hover {
     margin-bottom: 20px;
     margin-right: 50px;
 }
-
 .content h2 {
     margin-bottom: 30px;
     margin-right: 50px;
 }
-
 .home-container {
     background-image: url("../images/home-background.jpg");
     background-position: center center;
@@ -247,36 +258,31 @@ button:hover {
     width: 100%;
     height: 80vh;
 }
-
-.home-container h1 {
+.home-container h1{
     color: white;
     font-family: "Calibri Light";
     filter: brightness(1000%);
     font-size: 70px;
 }
-.home-container p {
-
+.home-container p{
     color:white;
     font-family: "Calibri Light";
     filter: brightness(1000%);
     font-size: 23px;
 }
-#home-screen p, #home-screen h1 {
+#home-screen p, #home-screen h1{
     margin: 10px 0;
 }
-
-#home-screen {
+#home-screen{
     padding: 0;
 }
-
-.home-caption {
+.home-caption{
     background-color: rgba(255, 255, 255, 0.7);
     padding: 10px;
     border-radius: 50px;
     font-size: 1.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .section {
     position: relative;
     height: 100vh;
@@ -291,7 +297,6 @@ button:hover {
     background-size: cover;
     padding: 40px;
 }
-
 .stats {
     display: flex;
     align-items: start;
@@ -303,12 +308,13 @@ button:hover {
 
 .Services{
     text-align: center;
+    margin-top: 60px;
 }
-
 .service-buttons {
     text-align: center;
+    margin-bottom: 60px
 }
-.buy {
+.buy{
     position: relative;
     background-image: url('../images/Merchendise.jpg');
     background-size: cover;
@@ -323,7 +329,6 @@ button:hover {
     z-index: 1;
     transition: transform 0.3s ease, background-size 0.3s ease;
     overflow: hidden;
-
 }
 .buy::before {
     content: '';
@@ -338,12 +343,13 @@ button:hover {
 }
 .buy:hover {
     transform: scale(100%);
+    transition-duration: 0.5s;
 }
 
 .sell{
     position: relative;
     background-image: url('../images/purchase.jpg');
-    background-size: cover;
+    background-size: 500px 350px;
     background-position: center;
     background-repeat: no-repeat;
     border: none;
@@ -353,9 +359,8 @@ button:hover {
     text-align: center;
     padding: 140px 160px;
     z-index: 1;
-    transition: transform 0.3s ease, background-size 0.3s ease;
+    transition: background-size 0.3s ease;
     overflow: hidden;
-
 }
 .sell::before {
     content: '';
@@ -367,9 +372,10 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
     border-radius: inherit;
+
 }
 .sell:hover {
-    transform: scale(100%);
+    background-size: 120%
 }
 
 .lease{
@@ -404,28 +410,134 @@ button:hover {
 }
 
 
-.contact-details{
-    text-align: center;
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-li {
-    margin-bottom: 10px;
-}
-h3 {
-    text-align: center;
-}
 
-
-.map-title{
-    text-align: center;
+.contact-map-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 70px 0;
+    font-size: 21px
+}
+.contact-info {
+    flex: 1;
+    max-width: 45%;
+    margin-top: 100px;
+    margin-left: 150px
+}
+.social-icons i {
+    font-size: 40px;
+    margin-right: 10px;
+}
+.map-container {
+    flex: 1;
+    max-width: 50%;
 }
 .map {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid #ccc;
+    width: 700px;
+    height: 400px;
+    margin-right: 100px;
+}
+
+
+hr {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 5px;
+    background-color: #edf4fd;
+    border: none;
+}
+.footer {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+.footer h2 {
+    font-family: "Calibri Light";
+}
+.footer p {
+    font-family: "Calibri Light";
+    font-size: 20px;
+}
+.fa-square-envelope {
+    font-size: 40px;
+    background-color: white;
+    color: black;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+.fa-square-envelope:hover {
+    color: white;
+    background-color: black;
+}
+.fa-square-instagram{
+    font-size: 40px;
+    background-color: white;
+    color: black;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+.fa-square-instagram:hover {
+    color: white;
+    background-color: black;
+    outline-color: black;
+}
+.fa-square-x-twitter{
+    font-size: 40px;
+    background-color: white;
+    color: black;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+.fa-square-x-twitter:hover {
+    color: white;
+    background-color: black;
+    outline-color: black;
+}
+.fa-square-youtube{
+    font-size: 40px;
+    background-color: white;
+    color: black;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+.fa-square-youtube:hover {
+    color: white;
+    background-color: black;
+    outline-color: black;
+}
+.footer-text-container {
+    display : flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.footer-text-container p {
+    font-family: "Calibri Light";
+    font-size: 20px;
+}
+.footer-text-container a {
+    font-family: "Calibri Light";
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
 }
