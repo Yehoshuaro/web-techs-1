@@ -10,31 +10,38 @@
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+<header>
 
-<img src="../images/light-logo.png" class = 'logo' height="353" width="1453"/>
+    <div class="logo">
+        <a href="properties-pavilion-en.html"><img src="../images/light-logo.png"/></a>
+    </div>
 
-<nav>
-    <a href="#About us">О нас</a>
-    <a href="#Services">Сервисы</a>
-    <a href="#Contacts">Контакты</a>
+    <nav>
+        <a href="#about-us" >About us</a>
+        <a href="#Services">Services</a>
+        <a href="#Contacts">Contacts</a>
+        <a href = "faq-en.html">FAQ</a>
 
-    <a href = "properties-pavilion-en.html">Eng</a>
-    <a href = "properties-pavilion-kz.html">Kaz</a>
-    <a href = "faq-ru.html"> FAQ </a>
-</nav>
+        <a href = "properties-pavilion-ru.html">Rus</a>
+        <a href = "properties-pavilion-kz.html">Kaz</a>
+    </nav>
+</header>
 
-<h1> Properties Pavilion </h1>
-<!--<img src="https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg?cs=srgb&dl=pexels-davidmcbee-1546168.jpg&fm=jpg"-->
-<!--     alt="Picture of the Properties"-->
-<!--     width="1500" >-->
-<!--     height ="2000" >-->
-<div class="home-container" id="home-screen">
+<div class="home-container" id="home-screen2">
+    <p> Properties Pavilion </p>
+    <h1>Воплощайте свои идеи в жизнь</h1>
+    <p>Все, о чем вы мечтали, может воплотиться в жизнь<br> именно в тот момент, когда вы решите победить</p>
 </div>
-<h2 id = "About us"> Пару слов о нашей компании: </h2>
-<p> "Properties Pavilion" – это не просто агентство недвижимости, а Ваш проводник в мир уникальных объектов и непревзойденного сервиса.
-    Мы стремимся к совершенству и предлагаем разнообразное портфолио недвижимости, чтобы каждый наш клиент нашел идеальный дом для себя и своей семьи.
-    Наша онлайн-платформа Property Pavilion приглашает Вас исследовать рынок, задавать вопросы и находить дом Вашей мечты.
-    Добро пожаловать в мир, где Ваши желания в области недвижимости выходят на первый план</p>
+
+<section id="about-us" class="about-section">
+    <div class="about-container">
+        <h2 class="about-title">Пару слов о нашей компании:</h2>
+        <p class="about-text">"Properties Pavilion" – это не просто агентство недвижимости, а Ваш проводник в мир уникальных объектов и непревзойденного сервиса.
+            Мы стремимся к совершенству и предлагаем разнообразное портфолио недвижимости, чтобы каждый наш клиент нашел идеальный дом для себя и своей семьи.
+            Наша онлайн-платформа Property Pavilion приглашает Вас исследовать рынок, задавать вопросы и находить дом Вашей мечты.
+            Добро пожаловать в мир, где Ваши желания в области недвижимости выходят на первый план</p>
+    </div>
+</section>
 
 <blockquote class = 'quote'>
     "Недвижимость не может быть утеряна или украдена, ее нельзя унести с собой. Приобретенная с здравым смыслом, оплаченная полностью и управляемая с разумной осторожностью, она является одним из самых безопасных вложений в мире."
@@ -98,31 +105,51 @@
     <button class="lease" onclick="window.location.href='leasing-form-ru.html';"> Аренда </button>
 </div>
 
-<h2 id = "Contacts" class = 'contact-details'> Контактная информация: </h2>
-<h3> Выберите удобный способ связаться с нами: </h3>
-<ul>
-    <li> Рабочее время: 09:00 до 17:00 </li>
-    <li> Телефон: +7 708 273 8537</li>
-    <li> Email: kasen.ernar06@gmail.com</li>
-    <li> Адрес: Мангилик Ел C1, город Астана, Республика Казахстан </li>
 
-<i class="fa-brands fa-square-x-twitter"></i>
-<i class="fa-brands fa-square-youtube"></i>
-<i class="fa-brands fa-square-instagram"></i>
-<i class="fa-solid fa-square-envelope"></i>
-</ul>
+<div class="contact-map-container">
+    <div class="contact-info">
+        <h2 id="Contacts" class="contact-details">Контактная информация:</h2>
+        <h3>ыберите удобный способ связаться с нами:</h3>
+        <ul>
+            <li> Рабочее время: 09:00 до 17:00 </li>
+            <li> Телефон: +7 708 273 8537</li>
+            <li> Email: kasen.ernar06@gmail.com</li>
+            <li> Адрес: Мангилик Ел C1, город Астана, Республика Казахстан </li>
+        </ul>
+        <div class="social-icons">
+            <i class="fa-brands fa-square-x-twitter"></i>
+            <i class="fa-brands fa-square-youtube"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-solid fa-square-envelope"></i>
+        </div>
+    </div>
 
+    <div class="map-container">
+        <h2 class='map-title'>We are on the Map</h2>
+        <iframe class="map"
+                src="https://yandex.ru/map-widget/v1/?ll=71.417839,51.090306&z=14&l=map&pt=71.417839,51.090306,flag">
+        </iframe>
+    </div>
+</div>
 
-<h2 class = 'map-title'> We are on the Map </h2>
-<iframe class ="map"
-        width="1500"
-        height="600"
-        src="https://yandex.ru/map-widget/v1/?ll=71.417839,51.090306&z=14&l=map&pt=71.417839,51.090306,flag">
-</iframe>
+<hr>
 
-<footer>
-    <p>Created by: Yerkhan Akhmet, Bakhtiyar Baizulla, Ernar Kassen </p>
-    <p>Date: September 2024</p>
+<footer class = "footer">
+    <h2> PP License</h2>
+    <p>Properties Pavilion — полностью интегрированная брокерская фирма по недвижимости, зарегистрированная в Астане.
+        Казахстан. Имеет лицензию Агентства по регулированию недвижимости.
+        при Земельном департаменте Астаны. Головной офис компании находится на 3 этаже АИТУ,
+        Астана, Казахстан</p>
+    <i class="fa-brands fa-square-x-twitter"></i>
+    <i class="fa-brands fa-square-youtube"></i>
+    <i class="fa-brands fa-square-instagram"></i>
+    <i class="fa-solid fa-square-envelope"></i>
+    <div class = "footer-text-container">
+        <a href = "youtube.com">Terms of Use</a>
+
+        <p>© 2024 Properties Pavilion. Все права защищены</p>
+    </div>
+
 </footer>
 
 </body>
