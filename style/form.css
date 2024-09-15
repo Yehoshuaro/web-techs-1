@@ -167,3 +167,106 @@ footer {
     color: #fff;
     border-color: #007bff;
 }
+hr {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 5px;
+    background-color: #edf4fd;
+    border: none;
+}
+.footer {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+.footer h2 {
+    font-family: "Calibri Light";
+}
+.footer p {
+    font-family: "Calibri Light";
+    font-size: 20px;
+}
+.fa-square-envelope {
+    font-size: 40px;
+    background-color: white;
+    color: black;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+
+.fa-square-envelope:hover {
+    color: white;
+    background-color: black;
+}
+.fa-square-instagram{
+    font-size: 40px;
+    background-color: white;
+    color: black;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+.fa-square-instagram:hover {
+    color: white;
+    background-color: black;
+    outline-color: black;
+}
+.fa-square-x-twitter{
+    font-size: 40px;
+    background-color: white;
+    color: black;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+.fa-square-x-twitter:hover {
+    color: white;
+    background-color: black;
+    outline-color: black;
+}
+.fa-square-youtube{
+    font-size: 40px;
+    background-color: white;
+    color: black;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+.fa-square-youtube:hover {
+    color: white;
+    background-color: black;
+    outline-color: black;
+}
+.footer-text-container {
+    display : flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.footer-text-container p {
+    font-family: "Calibri Light";
+    font-size: 20px;
+}
+.footer-text-container a {
+    font-family: "Calibri Light";
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
