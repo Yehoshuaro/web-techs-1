@@ -150,46 +150,6 @@ button:hover {
 
 
 
-.benefits-section {
-    text-align: center;
-    padding: 50px;
-    background-color: #ffffff;
-    margin-top: 50px;
-}
-.benefits-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #333;
-}
-.benefits-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-}
-.benefit {
-    max-width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-.benefit img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 20px;
-}
-.benefit h3 {
-    font-size: 1.5rem;
-    color: #2e86de;
-    margin-bottom: 10px;
-}
-.benefit p {
-    font-size: 1rem;
-    color: #666;
-}
-
-
 
 .section {
     position: relative;
@@ -368,12 +328,19 @@ button:hover {
 .buy:hover, .sell:hover, .lease:hover {
     background-size: 140%;
 }
+
 @media (max-width: 768px) {
-    .buy, .sell, .lease {
+    * {
+       width: auto;
         height: auto;
     }
 }
 
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
 
 .contact-map-container {
     display: flex;
