@@ -8,24 +8,40 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<style>
+  .container
+</style>
+
 </head>
 <body>
-<header>
+<header class="bg-white shadow-sm sticky-top">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <img src="../images/light-logo.png" alt="Logo" class="img-fluid">
+      </div>
+      <div class="col-auto">
+        <nav class="nav">
+          <a href="#about-us" class="text-dark mx-3">About Us</a>
+          <a href="#Services" class="text-dark mx-3">Services</a>
+          <a href="#Contacts" class="text-dark mx-3">Contacts</a>
+          <a href="faq-en.html" class="text-dark mx-3">FAQ</a>
+          <a href="properties-pavilion-ru.html" class="text-dark mx-3">Rus</a>
+          <a href="properties-pavilion-kz.html" class="text-dark mx-3">Kaz</a>
 
-  <div class="logo">
-    <a href="properties-pavilion-en.html"><img src="../images/light-logo.png"/></a>
+          <form action ="" class = "d-flex">
+            <input type = "search" placeholder="Search" class ="form-control mr-2">
+            <button class = "btn btn-outline-primary">Search</button>
+        </nav>
+      </div>
+    </div>
   </div>
-
-<nav>
-  <a href="#about-us" >About us</a>
-  <a href="#Services">Services</a>
-  <a href="#Contacts">Contacts</a>
-  <a href = "faq-en.html">FAQ</a>
-
-  <a href = "properties-pavilion-ru.html">Rus</a>
-  <a href = "properties-pavilion-kz.html">Kaz</a>
-</nav>
 </header>
+
 
 <div class="home-container" id="home-screen">
   <p> Properties Pavilion </p>
@@ -45,35 +61,46 @@
   </div>
 </section>
 
-
-
-<blockquote class = "quote">
-  "Real estate cannot be lost or stolen, nor can it be carried away. Purchased with common sense, paid for in full, and managed with reasonable care, it is about the safest investment in the world."
-  <cite> - Franklin D. Roosevelt</cite>
+<blockquote class="blockquote text-center py-5 bg-white">
+  <p>"Real estate cannot be lost or stolen, nor can it be carried away. Purchased with common sense, paid for in full, and managed with reasonable care, it is about the safest investment in the world."</p>
+  <footer class="blockquote-footer">Franklin D. Roosevelt</footer>
 </blockquote>
 
-
-
-<div class="benefits-section">
-  <h2>Our Benefits</h2>
-  <div class="benefits-container">
-    <div class="benefit">
-      <img src="../images/advantage-1.png" height="107" width="100" alt="Advantage 1 Icon" />
-      <h3>Advantage #1</h3>
-      <p>Stay ahead with our market-savvy professionals, ensuring you seize exclusive opportunities and navigate the real estate landscape with confidence.</p>
-    </div>
-    <div class="benefit">
-      <img src="../images/advantage-2.png" height="117" width="112" alt="Advantage 2 Icon" />
-      <h3>Advantage #2</h3>
-      <p>Experience a streamlined journey from start to finish. We prioritize efficiency, delivering prompt and smooth results, saving you valuable time and effort.</p>
-    </div>
-    <div class="benefit">
-      <img src="../images/advantage-3.png" height="125" width="117" alt="Advantage 3 Icon" />
-      <h3>Advantage #3</h3>
-      <p>Redefine affordability without compromise. Our premium services come with a commitment to cost-effectiveness, making your real estate goals not only achievable but budget-friendly.</p>
+<div class="benefits-section py-5">
+  <h2 class="text-center mb-4">Our Benefits</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <img src="../images/advantage-1.png" class="card-img-top mx-auto" style="width: 80px;" alt="Advantage 1 Icon" />
+          <div class="card-body">
+            <h3 class="card-title">Advantage #1</h3>
+            <p class="card-text">Stay ahead with our market-savvy professionals, ensuring you seize exclusive opportunities and navigate the real estate landscape with confidence.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <img src="../images/advantage-2.png" class="card-img-top mx-auto" style="width: 80px;" alt="Advantage 2 Icon" />
+          <div class="card-body">
+            <h3 class="card-title">Advantage #2</h3>
+            <p class="card-text">Experience a streamlined journey from start to finish. We prioritize efficiency, delivering prompt and smooth results, saving you valuable time and effort.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <img src="../images/advantage-3.png" class="card-img-top mx-auto" style="width: 80px;" alt="Advantage 3 Icon" />
+          <div class="card-body">
+            <h3 class="card-title">Advantage #3</h3>
+            <p class="card-text">Redefine affordability without compromise. Our premium services come with a commitment to cost-effectiveness, making your real estate goals not only achievable but budget-friendly.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
 
 
 <div class="section">
@@ -98,39 +125,58 @@
   </div>
 </div>
 
-<h2 id="Services" class = "Services"> Our services </h2>
-<div class="service-buttons">
-  <button class="buy" onclick="window.location.href='purchasing-form-en.html';"> Purchase  </button>
-  <button class="sell" onclick="window.location.href='selling-form-en.html'"> Sell </button>
-  <button class="lease" onclick="window.location.href='leasing-form-en.html';"> Lease </button>
-</div>
+<section class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="mb-5">Our Services</h2>
+    <div class="row">
+      <div class="col-4 col-md-4 mb-4">
+        <button class="buy" onclick="window.location.href='purchasing-form-en.html';"> Purchase </button>
+        </div>
 
+      <div class="col-4 col-md-4 mb-4">
+        <button class="sell" onclick="window.location.href='selling-form-en.html'"> Sell </button>
+      </div>
 
-<div class="contact-map-container">
-  <div class="contact-info">
-    <h2 id="Contacts" class="contact-details">Contact Information</h2>
-    <h3>Choose a convenient way to contact us:</h3>
-    <ul>
-      <li>Working Hours: 09:00 AM to 5:00 PM</li>
-      <li>Phone: +7 708 273 8537</li>
-      <li>Email: kasen.ernar06@gmail.com</li>
-      <li>Address: Mangilik El C1, Astana city, Republic Kazakhstan</li>
-    </ul>
-    <div class="social-icons">
-      <i class="fa-brands fa-square-x-twitter"></i>
-      <i class="fa-brands fa-square-youtube"></i>
-      <i class="fa-brands fa-square-instagram"></i>
-      <i class="fa-solid fa-square-envelope"></i>
+      <div class="col-4 col-md-4 mb-4">
+        <button class="lease" onclick="window.location.href='leasing-form-en.html';"> Lease </button>
+      </div>
+
     </div>
   </div>
+</section>
 
-  <div class="map-container">
-    <h2 class='map-title'>We are on the Map</h2>
-    <iframe class="map"
-            src="https://yandex.ru/map-widget/v1/?ll=71.417839,51.090306&z=14&l=map&pt=71.417839,51.090306,flag">
-    </iframe>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Contact Us</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3 form-floating">
+            <input type="email" class="form-control" id="email" placeholder="Email">
+            <label for="email">Email</label>
+          </div>
+          <div class="mb-3 form-floating">
+            <input type="text" class="form-control" id="name" placeholder="Name">
+            <label for="name">Name</label>
+          </div>
+          <div class="mb-3 form-floating">
+            <textarea class="form-control" id="message" placeholder="Message" style="height: 150px"></textarea>
+            <label for="message">Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="map-container">
+          <iframe src="https://yandex.ru/map-widget/v1/?ll=71.417839,51.090306&z=14&l=map&pt=71.417839,51.090306,flag" width="700 px" height="400" style= "border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 <hr>
 

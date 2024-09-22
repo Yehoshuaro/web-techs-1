@@ -21,6 +21,11 @@ header {
     justify-content: center;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+
 
 header img {
     max-width: 100%;
@@ -143,46 +148,6 @@ button:hover {
     margin-right: 60px;
 }
 
-
-
-.benefits-section {
-    text-align: center;
-    padding: 50px;
-    background-color: #ffffff;
-    margin-top: 50px;
-}
-.benefits-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #333;
-}
-.benefits-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-}
-.benefit {
-    max-width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-.benefit img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 20px;
-}
-.benefit h3 {
-    font-size: 1.5rem;
-    color: #2e86de;
-    margin-bottom: 10px;
-}
-.benefit p {
-    font-size: 1rem;
-    color: #666;
-}
 
 
 
@@ -315,88 +280,40 @@ button:hover {
 }
 .service-buttons {
     text-align: center;
-    margin-bottom: 60px
+    margin-bottom: 60px;
 }
-.buy{
+
+.buy, .sell, .lease {
     position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    padding: 40px;
+    z-index: 1;
+    transition: background-size 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 350px;
+}
+.buy {
     background-image: url('../images/Merchendise.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    color: #ffffff;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    padding: 140px 160px;
-    z-index: 1;
-    transition: transform 0.3s ease, background-size 0.3s ease;
-    overflow: hidden;
-}
-.buy::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-    border-radius: inherit;
-}
-.buy:hover {
-    background-size: 120%
 }
 
-.sell{
-    position: relative;
+.sell {
     background-image: url('../images/purchase.jpg');
-    background-size: 500px 350px;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    color: #ffffff;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    padding: 140px 160px;
-    z-index: 1;
-    transition: background-size 0.3s ease;
-    transition-duration: 1s;
-    overflow: hidden;
-}
-.sell::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-    border-radius: inherit;
-}
-.sell:hover {
-    background-size: 170%
 }
 
-.lease{
-    position: relative;
+.lease {
     background-image: url('../images/lease.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    color: #ffffff;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    padding: 140px 160px;
-    z-index: 1;
-    transition: background-size 0.3s ease;
-    overflow: hidden;
 }
-.lease::before {
+
+.buy::before, .sell::before, .lease::before {
     content: '';
     position: absolute;
     top: 0;
@@ -407,11 +324,23 @@ button:hover {
     z-index: -1;
     border-radius: inherit;
 }
-.lease:hover {
-    background-size: 120%
+
+.buy:hover, .sell:hover, .lease:hover {
+    background-size: 140%;
 }
 
+@media (max-width: 768px) {
+    * {
+       width: auto;
+        height: auto;
+    }
+}
 
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
 
 .contact-map-container {
     display: flex;
