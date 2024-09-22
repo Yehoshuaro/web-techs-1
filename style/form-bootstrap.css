@@ -1,0 +1,43 @@
+.icon-style {
+    font-size: 40px;
+    background-color: white;
+    color: black;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+
+.icon-style:hover {
+    color: white;
+    background-color: black;
+}
+
+footer {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-text-container p, .footer-text-container a, .footer h2, .footer p {
+    font-family: "Calibri Light";
+    font-size: 20px;
+}
+
+hr {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 5px;
+    background-color: #edf4fd;
+    border: none;
+}
+
+.footer {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+}

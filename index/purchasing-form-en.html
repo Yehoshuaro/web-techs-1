@@ -13,7 +13,7 @@
     <div class="logo">
         <a href="properties-pavilion-en.html"><img src="../images/light-logo.png"/></a>
     </div>
-    <nav class = "navigation">
+    <nav class="navigation">
         <a href="properties-pavilion-en.html#about-us">About us</a>
         <a href="properties-pavilion-en.html#Services">Services</a>
         <a href="properties-pavilion-en.html#Contacts">Contacts</a>
@@ -22,111 +22,111 @@
     </nav>
 </header>
 <body>
-    <main>
-        <section class = "purchasing-title">
-            <h1>Purchasing Form</h1>
+<main>
+    <section class="purchasing-title">
+        <h1>Purchasing Form</h1>
+    </section>
+    <form action="submit">
+        <section class="pers-data-container">
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" placeholder="Your email"><br>
+
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name" placeholder="Your full name"><br>
+
+            <label for="phone">Phone</label><br>
+            <input type="tel" name="phone" id="phone" placeholder="Your phone number"><br>
         </section>
-        <form action="submit">
-            <section class="pers-data-container">
-                <label for="email">Email</label><br>
-                <input type="email" name="email" id="email" placeholder="Your email"><br>
+        <section class="option-container">
+            <h2>Choose type of residence</h2>
+            <div class="option">
+                <input type="radio" name="options" id="house" value="1">
+                <label for="house">
+                    <img src="/images/detached-house.jpg" alt="Detached House" width="100" height="100"><br>
+                    Detached House
+                </label>
+            </div>
+            <div class="option">
+                <input type="radio" name="options" id="apartment" value="2">
+                <label for="apartment">
+                    <img src="/images/apartment.webp" alt="Apartment" width="100" height="100"><br>
+                    Apartment
+                </label>
+            </div>
+        </section>
+        <section class="desired-area">
+            <h2>Desired area range</h2>
+            <label for="desired-area-min">From</label>
+            <input type="number" name="desired-area-min" id="desired-area-min" step="0.01" placeholder="Min, sq m">
 
-                <label for="name">Name</label><br>
-                <input type="text" name="name" id="name" placeholder="Your full name"><br>
+            <label for="desired-area-max">To</label>
+            <input type="number" name="desired-area-max" id="desired-area-max" step="0.01" placeholder="Max, sq m"><br>
+        </section>
+        <section class="room-container">
+            <h2>How many rooms do you want?</h2>
+            <div class="room-options">
+                <label class="room-option">
+                    <input type="checkbox" name="rooms" value="1">
+                    1
+                </label>
+                <label class="room-option">
+                    <input type="checkbox" name="rooms" value="2">
+                    2
+                </label>
+                <label class="room-option">
+                    <input type="checkbox" name="rooms" value="3">
+                    3
+                </label>
+                <label class="room-option">
+                    <input type="checkbox" name="rooms" value="4">
+                    4
+                </label>
+                <label class="room-option">
+                    <input type="checkbox" name="rooms" value="5">
+                    5
+                </label>
+                <label class="room-option">
+                    <input type="checkbox" name="rooms" value="6">
+                    6
+                </label>
+                <label class="room-option">
+                    <input type="checkbox" name="rooms" value="7+">
+                    7+
+                </label>
+            </div>
+        </section>
+        <section class="desired-price">
+            <h2>Desired price range</h2>
+            <label for="desired-price-min">From</label>
+            <input type="number" name="desired-price" id="desired-price-min" step="0.01" placeholder="Min, USD $">
 
-                <label for="phone">Phone</label><br>
-                <input type="tel" name="phone" id="phone" placeholder="Your phone number"><br>
-            </section>
-            <section class="option-container">
-                <h2>Choose type of residence</h2>
-                <div class="option">
-                    <input type="radio" name="options" id="house" value="1">
-                    <label for="house">
-                        <img src="/images/detached-house.jpg" alt="Detached House" width="100" height="100"><br>
-                        Detached House
-                    </label>
-                </div>
-                <div class="option">
-                    <input type="radio" name="options" id="apartment" value="2">
-                    <label for="apartment">
-                        <img src="/images/apartment.webp" alt="Apartment" width="100" height="100"><br>
-                        Apartment
-                    </label>
-                </div>
-            </section>
-            <section class="desired-area">
-                <h2>Desired area range</h2>
-                <label for="desired-area-min">From</label>
-                <input type="number" name="desired-area-min" id="desired-area-min" step="0.01" placeholder="Min, sq m">
-
-                <label for="desired-area-max">To</label>
-                <input type="number" name="desired-area-max" id="desired-area-max" step="0.01" placeholder="Max, sq m"><br>
-            </section>
-            <section class="room-container">
-                <h2>How many rooms do you want?</h2>
-                <div class="room-options">
-                    <label class="room-option">
-                        <input type="checkbox" name="rooms" value="1">
-                        1
-                    </label>
-                    <label class="room-option">
-                        <input type="checkbox" name="rooms" value="2">
-                        2
-                    </label>
-                    <label class="room-option">
-                        <input type="checkbox" name="rooms" value="3">
-                        3
-                    </label>
-                    <label class="room-option">
-                        <input type="checkbox" name="rooms" value="4">
-                        4
-                    </label>
-                    <label class="room-option">
-                        <input type="checkbox" name="rooms" value="5">
-                        5
-                    </label>
-                    <label class="room-option">
-                        <input type="checkbox" name="rooms" value="6">
-                        6
-                    </label>
-                    <label class="room-option">
-                        <input type="checkbox" name="rooms" value="7+">
-                        7+
-                    </label>
-                </div>
-            </section>
-            <section class="desired-price">
-                <h2>Desired price range</h2>
-                <label for="desired-price-min">From</label>
-                <input type="number" name="desired-price" id="desired-price-min" step="0.01" placeholder="Min, USD $">
-
-                <label for="desired-price-max">To</label>
-                <input type="number" name="desired-price" id="desired-price-max" step="0.01" placeholder="Max, USD $"><br>
-            </section>
-            <section class="comments">
-                <label for="comment">Comments</label><br>
-                <textarea id="comment" name="comment" rows="6" cols="60" placeholder="Leave your comment"></textarea>
-            </section>
-            <input type="submit" value="Confirm">
-        </form>
-    </main><hr>
+            <label for="desired-price-max">To</label>
+            <input type="number" name="desired-price" id="desired-price-max" step="0.01" placeholder="Max, USD $"><br>
+        </section>
+        <section class="comments">
+            <label for="comment">Comments</label><br>
+            <textarea id="comment" name="comment" rows="6" cols="60" placeholder="Leave your comment"></textarea>
+        </section>
+        <input type="submit" value="Confirm">
+    </form>
+</main><hr>
 
 </body>
-<footer class = "footer">
+<footer class="footer">
     <h2> PP License</h2>
     <p>Properties Pavilion Properties is a fully integrated real estate brokerage firm registered in Astana,
         Kazakhstan. It is licensed by the Real Estate Regulatory Agency
         under the Astana Land Department. The head office of the company is 3rd floor, AITU,
         Astana, Kazakhstan</p>
     <p>Created by: Yerkhan Akhmet, Bakhtiyar Baizulla, Ernar Kassen</p>
-    <div class = "icon-container">
-    <i class="fa-brands fa-square-x-twitter"></i>
-    <i class="fa-brands fa-square-youtube"></i>
-    <i class="fa-brands fa-square-instagram"></i>
+    <div class="icon-container">
+        <i class="fa-brands fa-square-x-twitter"></i>
+        <i class="fa-brands fa-square-youtube"></i>
+        <i class="fa-brands fa-square-instagram"></i>
         <i class="fa-solid fa-square-envelope"></i>
     </div>
-    <div class = "footer-text-container">
-        <a href = "youtube.com">Terms of Use</a>
+    <div class="footer-text-container">
+        <a href="youtube.com">Terms of Use</a>
 
         <p>© 2024 Properties Pavilion. All Rights Reserved</p>
     </div>
