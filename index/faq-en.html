@@ -10,45 +10,44 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
           integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet">
 </head>
 <body>
-<header class="sticky-top bg-white shadow-sm">
-    <div class="container">
-        <div class="d-flex justify-content-between py-5">
-
-            <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
-                <div class="container-fluid">
-                    <div class="container">
-                        <a class="navbar-brand" href="#">
-                            <img src="../images/light-logo.png" alt="Bootstrap" width="300" height="240">
-                        </a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item mx-2">
-                                <a class="nav-link" href="properties-pavilion-en.html">About&nbsp;us</a>
-                            </li>
-                            <li class="nav-item mx-2">
-                                <a class="nav-link" href="properties-pavilion-en.html">Services</a>
-                            </li>
-                            <li class="nav-item mx-2">
-                                <a class="nav-link" href="properties-pavilion-en.html">Contacts</a>
-                            </li>
-                            <li class="nav-item mx-2">
-                                <a class="nav-link" href="faq-ru.html">Rus</a>
-                            </li>
-                            <li class="nav-item mx-2">
-                                <a class="nav-link" href="faq-kz.html">Kz</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+<header class="bg-white shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../images/light-logo.png" alt="Logo" class="img-fluid" style="max-height: 150px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="properties-pavilion-en.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="properties-pavilion-en.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="properties-pavilion-en.html">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="faq-ru.html"><i class="flag-icon flag-icon-ru"></i>Rus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="faq-kz.html"><i class="flag-icon flag-icon-kz"></i>Kaz</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </nav>
 </header>
 
 <div class="main-text-container bg-light p-5">
