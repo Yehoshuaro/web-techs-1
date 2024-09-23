@@ -1,4 +1,4 @@
-header {
+header{
     background-color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -13,7 +13,7 @@ header {
     top: 0;
     z-index: 1000;
 }
-.logo {
+.logo{
     height: 80px;
     width: 400px;
     display: flex;
@@ -21,10 +21,9 @@ header {
     justify-content: center;
 }
 
-* {
+*{
     box-sizing: border-box;
 }
-
 
 
 header img {
