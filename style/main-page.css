@@ -330,7 +330,7 @@ button:hover {
 
 @media (max-width: 768px) {
     * {
-       width: auto;
+        width: auto;
         height: auto;
     }
 }
