@@ -1,94 +1,182 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Форма продажи</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchasing Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style/form.css">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
           integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet">
 </head>
-<header>
-    <div class="logo">
-        <a href="properties-pavilion-ru.html"><img src="../images/light-logo.png"/></a>
-    </div>
-    <nav>
-        <a href="properties-pavilion-ru.html#About us">О нас</a>
-        <a href="properties-pavilion-ru.html#Services">Услуги</a>
-        <a href="properties-pavilion-ru.html#Contacts">Контакты</a>
-        <a href="selling-form-en.html">Eng</a>
-        <a href="selling-form-kz.html">Kaz</a>
+<body>
+<header class="bg-white shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="properties-pavilion-en.html">
+                <img src="../images/light-logo.png" alt="Logo" class="img-fluid" style="max-height: 100px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="properties-pavilion-en.html#about-us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="properties-pavilion-en.html#Services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="properties-pavilion-en.html#Contacts">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="faq-en.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="properties-pavilion-ru.html"><i class="flag-icon flag-icon-ru"></i>Rus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="properties-pavilion-kz.html"><i class="flag-icon flag-icon-kz"></i>Kaz</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
     </nav>
 </header>
-<body>
-    <main>
-        <h1>Форма продажи</h1>
-        <form action="submit">
-            <section class="pers-data-container">
-                <label for="email">Электронная почта</label><br>
-                <input type="email" name="email" id="email" placeholder="Ваш email"><br>
 
-                <label for="name">Имя</label><br>
-                <input type="text" name="name" id="name" placeholder="Ваше полное имя"><br>
+<main class="container my-5">
+    <section class="purchasing-title text-center mb-5">
+        <h1>Purchasing Form</h1>
+    </section>
 
-                <label for="phone">Телефон</label><br>
-                <input type="tel" name="phone" id="phone" placeholder="Ваш номер телефона"><br>
-            </section>
-            <section class="option-container">
-                <h2>Выберите тип вашего жилья</h2>
-                <div class="option">
-                    <input type="radio" name="options" id="house" value="1">
-                    <label for="house">
-                        <img src="/images/detached-house.jpg" alt="Отдельный дом" width="100" height="100"><br>
-                        Отдельный дом
+    <form action="submit" class="row g-3">
+        <section class="col-sm-12 col-md-6 col-lg-4 mx-auto">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your email">
+
+            <label for="name" class="form-label mt-3">Name</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Your full name">
+
+            <label for="phone" class="form-label mt-3">Phone</label>
+            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your phone number">
+        </section>
+
+        <section class="col-sm-12 col-md-6 col-lg-4 mx-auto">
+            <h2 class="mb-3">Choose type of residence</h2>
+            <div class="d-flex justify-content-around">
+                <div class="form-check d-flex align-items-center justify-content-center">
+                    <input type="radio" class="form-check-input" name="options" id="house" value="1">
+                    <label for="house" class="form-check-label d-flex align-items-center justify-content-center flex-column">
+                        <img src="/images/detached-house.jpg" alt="Detached House" width="100" height="100" class="mx-1"><br>
+                        Detached House
                     </label>
                 </div>
-                <div class="option">
-                    <input type="radio" name="options" id="apartment" value="2">
-                    <label for="apartment">
-                        <img src="/images/apartment.webp" alt="Квартира" width="100" height="100"><br>
-                        Квартира
+                <div class="form-check d-flex align-items-center justify-content-center">
+                    <input type="radio" class="form-check-input" name="options" id="apartment" value="2">
+                    <label for="apartment" class="form-check-label d-flex justify-content-center flex-column">
+                        <img src="/images/apartment.webp" alt="Apartment" width="100" height="100" class="mx-4"><br>
+                        Apartment
                     </label>
                 </div>
-            </section>
-            <section class="area">
-                <label for="area">Площадь</label><br>
-                <input type="number" name="area" id="area" step="0.01" placeholder="Площадь"><br>
-            </section>
-            <section class="rooms">
-                <label for="rooms">Количество комнат</label><br>
-                <input type="number" name="rooms" id="rooms" step="1" placeholder="Количество комнат"><br>
-            </section>
-            <section class="price">
-                <label for="price">Цена</label><br>
-                <input type="number" name="price" id="price" step="0.01" placeholder="Цена"><br>
-            </section>
-            <section class="description">
-                <label for="description">Описание</label><br>
-                <textarea id="description" name="description" rows="6" cols="60" placeholder="Оставьте описание вашего жилья"></textarea>
-            </section>
-            <input type="submit" value="Подтвердить">
-        </form>
-    </main>
-    <hr>
-    <footer class = "footer">
-        <h2> PP License</h2>
-        <p>Properties Pavilion Properties is a fully integrated real estate brokerage firm registered in Astana,
-            Kazakhstan. It is licensed by the Real Estate Regulatory Agency
-            under the Astana Land Department. The head office of the company is 3rd floor, AITU,
-            Astana, Kazakhstan</p>
-        <p>Created by: Yerkhan Akhmet, Bakhtiyar Baizulla, Ernar Kassen</p>
+            </div>
+        </section>
+
+        <section class="col-sm-12 col-md-6 col-lg-4 mx-auto">
+            <h2 class="mb-3">Desired area range</h2>
+            <div class="d-flex justify-content-around flex-column">
+                <div>
+                    <label for="desired-area-min" class="form-label">From</label>
+                    <input type="number" class="form-control" name="desired-area-min" id="desired-area-min" step="0.01" placeholder="Min, sq m">
+                </div>
+                <div>
+                    <label for="desired-area-max" class="form-label">To</label>
+                    <input type="number" class="form-control" name="desired-area-max" id="desired-area-max" step="0.01" placeholder="Max, sq m">
+                </div>
+            </div>
+        </section>
+
+        <section class="col-sm-12 col-md-6 col-lg-4 mx-auto">
+            <h2 class="mb-3">How many rooms do you want?</h2>
+            <div class="d-flex justify-content-center flex-row">
+                <label class="form-check">
+                    <input type="checkbox" class="form-check-input" name="rooms" value="1">
+                    1
+                </label>
+                <label class="form-check">
+                    <input type="checkbox" class="form-check-input" name="rooms" value="2">
+                    2
+                </label>
+                <label class="form-check">
+                    <input type="checkbox" class="form-check-input" name="rooms" value="3">
+                    3
+                </label>
+                <label class="form-check">
+                    <input type="checkbox" class="form-check-input" name="rooms" value="4">
+                    4
+                </label>
+                <label class="form-check">
+                    <input type="checkbox" class="form-check-input" name="rooms" value="5">
+                    5
+                </label>
+                <label class="form-check">
+                    <input type="checkbox" class="form-check-input" name="rooms" value="6">
+                    6
+                </label>
+                <label class="form-check">
+                    <input type="checkbox" class="form-check-input" name="rooms" value="7+">
+                    7+
+                </label>
+            </div>
+        </section>
+
+        <section class="col-sm-12 col-md-6 col-lg-4 mx-auto">
+            <h2 class="mb-3">Desired price range</h2>
+            <div class="d-flex justify-content-around flex-column">
+                <div>
+                    <label for="desired-price-min" class="form-label">From</label>
+                    <input type="number" class="form-control" name="desired-price" id="desired-price-min" step="0.01" placeholder="Min, USD $">
+                </div>
+                <div>
+                    <label for="desired-price-max" class="form-label">To</label>
+                    <input type="number" class="form-control" name="desired-price" id="desired-price-max" step="0.01" placeholder="Max, USD $">
+                </div>
+            </div>
+        </section>
+
+        <section class="col-sm-12 col-md-6 col-lg-4 mx-auto">
+            <label for="comment" class="form-label">Comments</label>
+            <textarea class="form-control" id="comment" name="comment" rows="6" placeholder="Leave your comment"></textarea>
+        </section>
+
+        <div class="col-12 text-center">
+            <input type="submit" value="Confirm" class="btn btn-primary">
+        </div>
+    </form>
+</main>
+
+<hr>
+
+<footer class="footer bg-light text-center py-4">
+    <h2>PP License</h2>
+    <p>Properties Pavilion Properties is a fully integrated real estate brokerage firm registered in Astana, Kazakhstan...</p>
+    <p>Created by: Yerkhan Akhmet, Bakhtiyar Baizulla, Ernar Kassen</p>
+    <div class="icon-container">
         <i class="fa-brands fa-square-x-twitter"></i>
         <i class="fa-brands fa-square-youtube"></i>
         <i class="fa-brands fa-square-instagram"></i>
         <i class="fa-solid fa-square-envelope"></i>
-        <div class = "footer-text-container">
-            <a href = "youtube.com">Terms of Use</a>
+    </div>
+    <p>© 2024 Properties Pavilion. All Rights Reserved</p>
+</footer>
 
-            <p>© 2024 Properties Pavilion. All Rights Reserved</p>
-        </div>
-
-    </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
