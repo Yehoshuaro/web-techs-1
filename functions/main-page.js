@@ -127,15 +127,12 @@ let sign = prompt();
 if (sign === "+"){
     console.log(x+y);
 }
-
 if (sign === "-"){
     console.log(x-y);
 }
-
 if (sign === "*"){
     console.log(x*y);
 }
-
 if (sign === "/" && y !== 0) {
     console.log(x / y);
 }
