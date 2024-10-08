@@ -1,4 +1,4 @@
-
+/* 1st Task
 let username = prompt("What is Your name?");
 let lastName = prompt("What is your surname?");
 let age = prompt("What is your age?");
@@ -6,7 +6,7 @@ let age = prompt("What is your age?");
 console.log("First Name: ", username);
 console.log("Last Name: ", lastName);
 console.log("Age: ", age);
-
+*/
 
 /* 2nd Task
 let age = prompt("Enter Your age: ");
@@ -104,4 +104,42 @@ let second = Number(prompt(""));
 console.log(first === second);
 console.log(first > second);
 console.log(first < second);
+*/
+
+/* 9th Task
+let arr = [];
+
+arr[0] = prompt();
+arr[1] = prompt();
+arr[2] = prompt();
+
+arr.unshift(prompt());
+arr.pop();
+
+console.log(arr);
+*/
+
+/* 10th Task
+let x = Number(prompt());
+let y = Number(prompt());
+let sign = prompt();
+
+if (sign === "+"){
+    console.log(x+y);
+}
+
+if (sign === "-"){
+    console.log(x-y);
+}
+
+if (sign === "*"){
+    console.log(x*y);
+}
+
+if (sign === "/" && y !== 0) {
+    console.log(x / y);
+}
+else if (sign === "/" && y === 0) {
+    console.log("Undefined");
+}
 */
