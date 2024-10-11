@@ -11,6 +11,7 @@ console.log("Age: ", age);
 /* 2nd Task
 let age = prompt("Enter Your age: ");
 let availability = prompt("Do You have a licence? Write with Yes or No: ");
+
 if (availability === "Yes" && age >= 18) {
     console.log("He/She is eligible to drive");
 }
@@ -51,14 +52,14 @@ console.log("The number is special!");
  */
 
 /* 4th Task
-let num = Number("");
+let num = Number(prompt(""));
 let str = prompt("");
-let bool = prompt("");
+let bool = prompt("").toLowerCase() === "true";
 
-console.log(typeof num);
-console.log(typeof str);
-console.log(typeof (bool === "true"));
- */
+console.log("Type of num: ", typeof num);
+console.log("Type of str: ", typeof str);
+console.log("Type of bool: ", typeof bool);
+*/
 
 /* 5th Task
 let length = Number(prompt());
@@ -71,9 +72,10 @@ if (update === "width"){
     width = Number(prompt());
 }
 console.log(length * width);
- */
+*/
 
 /* 6th Task
+
 let colorCount = Number(prompt("How many colors would you like to input? "));
 let colors = [];
 
@@ -140,3 +142,6 @@ else if (sign === "/" && y === 0) {
     console.log("Undefined");
 }
 */
+
+
+
