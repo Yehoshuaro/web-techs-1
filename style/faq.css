@@ -101,6 +101,15 @@ nav a {
     font-size: 20px;
     transition: 0.3s;
 }
+.text-link{
+    display: flex;
+}
+.text-link p{
+    margin-right: 8px;
+}
+.text-link a {
+    font-size: 20px;
+}
 input form-control.me-2 {
     transition: 3s;
 }
@@ -181,10 +190,20 @@ body {
     transition: 0.3s;
 }
 
+.nav-item{
+    display: flex;
+}
+.nav-item button{
+    border-right: 10px;
+}
+
 /* Dark mode styles */
 body.dark-mode {
     background-color: #121212;
     color: #e0e0e0;
+}
+body.dark-mode .nav-item button {
+    background-color: #1f1f1f;
 }
 
 /* Header and Navbar Dark Mode */

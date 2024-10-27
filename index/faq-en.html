@@ -27,19 +27,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="properties-pavilion-en.html">About Us</a>
+                        <a class="nav-link text-dark" href="properties-pavilion-en.html" data-i18n="aboutUs" >About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="properties-pavilion-en.html">Services</a>
+                        <a class="nav-link text-dark" href="properties-pavilion-en.html" data-i18n="services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="properties-pavilion-en.html">Contacts</a>
+                        <a class="nav-link text-dark" href="properties-pavilion-en.html" data-i18n="contacts">Contacts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="faq-ru.html"><i class="flag-icon flag-icon-ru"></i>Rus</a>
+                        <button class="nav-link text-dark" onclick="switchLanguage('en')" data-i18n="en">En</button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="faq-kz.html"><i class="flag-icon flag-icon-kz"></i>Kaz</a>
+                        <button class="nav-link text-dark" onclick="switchLanguage('kz')" data-i18n="kaz">Kaz</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link text-dark" onclick="switchLanguage('ru')" data-i18n="rus">Rus</button>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -48,39 +51,39 @@
                 </form>
             </div>
         </div>
-        <button id="darkModeToggle" class="btn btn-outline-dark">Dark Mode</button>
+        <button id="darkModeToggle" class="btn btn-outline-dark" data-i18n="darkMode">Dark Mode</button>
     </nav>
 
 </header>
 
 <div class="main-text-container bg-light p-5">
-    <h1 class="text-center">Frequently Asked Questions (FAQ)</h1>
+    <h1 class="text-center" data-i18n="mainText">Frequently Asked Questions (FAQ)</h1>
 </div>
 
 <div class="question-container container my-5">
     <details class="mb-4">
-        <summary>What is this website about?</summary>
-        <p>This website is designed to provide information about services and products of Properties Pavilion.</p>
+        <summary data-i18n="summaryOne">What is this website about?</summary>
+        <p data-i18n="summaryOneTxt">This website is designed to provide information about services and products of Properties Pavilion.</p>
     </details>
 
     <details class="mb-4">
-        <summary>How can I contact support?</summary>
-        <p>You can contact support through our <a href="https://youtu.be/dQw4w9WgXcQ?si=TlG4PyO3QlId4ile" target="_blank">support email</a> or by visiting our contact page.</p>
+        <summary data-i18n="summaryTwo">How can I contact support?</summary>
+        <div class = "text-link"><p data-i18n="summaryTwoTxt">You can contact support through our  </p> <a href="https://youtu.be/dQw4w9WgXcQ?si=TlG4PyO3QlId4ile" target="_blank" data-i18n="supportEmail">support email</a></div>
     </details>
 
     <details class="mb-4">
-        <summary>What payment methods do you accept?</summary>
-        <p>We accept credit cards, debit cards, and PayPal.</p>
+        <summary data-i18n="summaryThree">What payment methods do you accept?</summary>
+        <p data-i18n="summaryThreeTxt">We accept credit cards, debit cards, and PayPal.</p>
     </details>
 
     <details class="mb-4">
-        <summary>How to fill the form for property selling?</summary>
-        <p>You can go to the main page and scroll down to our services, there you can find selling form. </p>
+        <summary data-i18n="summaryFour">How to fill the form for property selling?</summary>
+        <p data-i18n="summaryFourTxt">You can go to the main page and scroll down to our services, there you can find selling form. </p>
     </details>
 
     <details class="mb-4">
-        <summary>When will I receive an answer after submitting the form?</summary>
-        <p>Once you send the form, one of our agents will contact you in a day or two.</p>
+        <summary data-i18n="summaryFive">When will I receive an answer after submitting the form?</summary>
+        <p data-i18n="summaryFiveTxt">Once you send the form, one of our agents will contact you in a day or two.</p>
     </details>
 </div>
 
@@ -107,5 +110,6 @@
 </footer>
 
 <script src = "../functions/faq.js"></script>
+<script src = "../functions/faq-language-switcher.js"></script>
 </body>
 </html>
