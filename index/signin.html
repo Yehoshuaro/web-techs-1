@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body, html {
             margin: 0;
@@ -14,24 +13,18 @@
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
-            background-color: #FFFFFF;
-            background-size: cover;
+            background-color: #f5f5f5;
         }
 
         .login-container {
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 40px;
             border-radius: 10px;
-            width: 300px;
+            width: 350px;
             text-align: center;
         }
 
-        .login-container h2 {
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .login-container input[type="text"],
+        .login-container input[type="email"],
         .login-container input[type="password"] {
             width: 100%;
             padding: 10px;
@@ -46,74 +39,60 @@
             margin: 10px 0;
             border: none;
             border-radius: 5px;
-        }
-
-        .login-container .login-btn {
             background-color: #22c7e0;
             color: white;
             cursor: pointer;
         }
 
-        .login-container .cancel-btn {
-            background-color: #356187;
-            color: white;
-            cursor: pointer;
+        .login-container button:hover {
+            background-color: #1abdd6;
         }
 
-        .login-container .forgot-password {
+        .login-container a {
             color: white;
+            display: block;
             margin-top: 10px;
-            text-decoration: none;
-            font-size: 0.9em;
-            transition: color 0.3s ease;
-        }
-
-        .login-container .forgot-password:hover {
-            color: #22c7e0;
         }
     </style>
 </head>
 <body>
 <div class="login-container">
-    <h2>Sign In</h2>
+    <h2 style="color:white">Sign In</h2>
     <form id="signInForm">
-        <input type="text" id="login" name="login" placeholder="Enter Username" required>
-        <input type="password" id="password" name="password" placeholder="Enter Password" required>
-        <button class="login-btn" type="submit">Login</button>
-        <button class="cancel-btn" type="button" onclick="window.location.href='signup.html';">Cancel</button>
-        <a href="#" class="forgot-password">Forgot password?</a>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <button type="submit">Sign In</button>
+        <a href="forgot-password.html">Forgot password?</a>
     </form>
 </div>
 
 <script>
     let users = {
-        0: {login: 'Yerkhan', password: '3319', role: 'admin'},
-        1: {login: 'Bakhtiyar', password: '3319', role: 'admin'},
-        2: {login: 'Ernar', password: '3319', role: 'admin'},
+        0: {firstName: 'Yerkhan', lastName: 'Akhmet', email: 'yerkhan@gmail.com', password: '3319', role: 'admin'},
+        1: {firstName: 'Bakhtiyar', lastName: 'Baizulla', email: 'bakhtiyar@gmail.com', password: '3319', role: 'admin'},
+        2: {firstName: 'Ernar', lastName: 'Kassen', email: 'ernar@gmail.com', password: '3319', role: 'admin'}
     };
 
     document.getElementById('signInForm').addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const loginUser = document.getElementById('login').value;
+        const emailUser = document.getElementById('email').value;
         const passwordUser = document.getElementById('password').value;
 
-        const user = Object.values(users).find(u => u.login === loginUser && u.password === passwordUser);
+        const user = Object.values(users).find(u => u.email === emailUser && u.password === passwordUser);
 
         if (user) {
-            alert(`Welcome, ${user.login}!`);
+            alert(`Welcome, ${user.firstName}!`);
 
             if (user.role === 'admin') {
-                alert('Welcome to the admin panel!');
+                alert('Welcome to the admin panel');
             } else {
                 alert("You don't have access to the admin panel");
             }
         } else {
-            alert('Invalid login or password');
+            alert('Invalid email or password');
         }
     });
 </script>
-
-
 </body>
 </html>

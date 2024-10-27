@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body, html {
             margin: 0;
@@ -14,25 +13,20 @@
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
-            background-color: #FFFFFF;
-            background-size: cover;
+            background-color: #f5f5f5;
         }
 
-        .login-container {
-            background-color: rgba(0, 0, 0, 0.6);
+        .signup-container {
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 40px;
             border-radius: 10px;
-            width: 300px;
+            width: 350px;
             text-align: center;
         }
 
-        .login-container h2 {
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
+        .signup-container input[type="text"],
+        .signup-container input[type="password"],
+        .signup-container input[type="email"] {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
@@ -40,27 +34,22 @@
             border-radius: 5px;
         }
 
-        .login-container button {
+        .signup-container button {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
             border: none;
             border-radius: 5px;
-        }
-
-        .login-container .login-btn {
             background-color: #22c7e0;
             color: white;
             cursor: pointer;
         }
 
-        .login-container .cancel-btn {
-            background-color: #356187;
-            color: white;
-            cursor: pointer;
+        .signup-container button:hover {
+            background-color: #1abdd6;
         }
 
-        .login-container a {
+        .signup-container a {
             color: white;
             display: block;
             margin-top: 10px;
@@ -68,26 +57,29 @@
     </style>
 </head>
 <body>
-<div class="login-container">
-    <h2>Sign Up</h2>
+<div class="signup-container">
+    <h2 style="color:white">Sign Up</h2>
     <form id="signUpForm">
-        <input type="text" id="username" name="username" placeholder="Enter Username" required>
-        <input type="password" id="password" name="password" placeholder="Enter Password" required>
-        <button class="login-btn" type="submit">Register</button>
-        <button class="cancel-btn" type="button" onclick="window.location.href='signin.html';">Cancel</button>
-        <a href="#">Forgot password?</a>
+        <input type="text" id="firstName" placeholder="Enter First Name" required>
+        <input type="text" id="lastName" placeholder="Enter Last Name" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <button type="submit">Sign Up</button>
+        <a href="signin.html">Already have an account? Sign In</a>
     </form>
 </div>
 
 <script>
     let users = {
-        0: {name: 'Yerkhan', password: '3319', role: 'admin'},
-        1: {name: 'Bakhtiyar', password: '3319', role: 'admin'},
-        2: {name: 'Ernar', password: '3319', role: 'admin'},
+        0: {firstName: 'Yerkhan', lastName: 'Akhmet', email: 'yerkhan@gmail.com', password: '3319', role: 'admin'},
+        1: {firstName: 'Bakhtiyar', lastName: 'Baizulla', email: 'bakhtiyar@gmail.com', password: '3319', role: 'admin'},
+        2: {firstName: 'Ernar', lastName: 'Kassen', email: 'ernar@gmail.com', password: '3319', role: 'admin'}
     };
 
-    function User(name, login, password, role = 'user') {
-        this.name = name;
+    function User(firstName, lastName, email, password, role = 'user') {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
         this.password = password;
         this.role = role;
     }
@@ -99,16 +91,18 @@
     document.getElementById('signUpForm').addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const nameUser = document.getElementById('username').value;
-        const passwordUser = document.getElementById('password').value;
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
 
-        if (nameUser && passwordUser) {
-            const user = new User(nameUser, nameUser, passwordUser);
+        if (firstName && lastName && email && password) {
+            const user = new User(firstName, lastName, email, password);
 
             const userId = createId(users);
             users[userId] = user;
 
-            alert(`User ${nameUser} successfully registered`);
+            alert(`User ${firstName} successfully registered`);
             console.log(users);
         } else {
             alert('Please fill out all fields');
