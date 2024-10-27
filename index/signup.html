@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body, html {
@@ -26,12 +26,6 @@
             text-align: center;
         }
 
-        .login-container img {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 20px;
-        }
-
         .login-container h2 {
             color: white;
             margin-bottom: 20px;
@@ -44,10 +38,6 @@
             margin: 10px 0;
             border: none;
             border-radius: 5px;
-        }
-
-        .login-container input[type="checkbox"] {
-            margin-right: 10px;
         }
 
         .login-container button {
@@ -80,12 +70,50 @@
 <body>
 <div class="login-container">
     <h2>Sign Up</h2>
-    <form action="/login" method="POST">
-        <input type="text" name="username" placeholder="Enter Username" required>
-        <input type="password" name="password" placeholder="Enter Password" required>
-        <button class="login-btn" type="submit">Login</button>
-        <button class="cancel-btn" type="button" onclick="window.location.href='properties-pavilion-en.html';">Cancel</button>
+    <form id="signUpForm">
+        <input type="text" id="username" name="username" placeholder="Enter Username" required>
+        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+        <button class="login-btn" type="submit">Register</button>
+        <button class="cancel-btn" type="button" onclick="window.location.href='signin.html';">Cancel</button>
+        <a href="#">Forgot password?</a>
     </form>
 </div>
+
+<script>
+    let users = {
+        0: {name: 'Yerkhan', password: '3319', role: 'admin'},
+        1: {name: 'Bakhtiyar', password: '3319', role: 'admin'},
+        2: {name: 'Ernar', password: '3319', role: 'admin'},
+    };
+
+    function User(name, login, password, role = 'user') {
+        this.name = name;
+        this.password = password;
+        this.role = role;
+    }
+
+    function createId(users) {
+        return Object.keys(users).length;
+    }
+
+    document.getElementById('signUpForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const nameUser = document.getElementById('username').value;
+        const passwordUser = document.getElementById('password').value;
+
+        if (nameUser && passwordUser) {
+            const user = new User(nameUser, nameUser, passwordUser);
+
+            const userId = createId(users);
+            users[userId] = user;
+
+            alert(`User ${nameUser} successfully registered`);
+            console.log(users);
+        } else {
+            alert('Please fill out all fields');
+        }
+    });
+</script>
 </body>
 </html>
