@@ -16,7 +16,7 @@ document.getElementById('signInForm').addEventListener('submit', (e) => {
         alert(`Welcome, ${user.firstName}!`);
 
         if (user.role === 'admin') {
-            window.location.href = 'admin-panel.html';  // Перенаправление на админ панель
+            window.location.href = 'admin-panel.html';
         } else {
             alert("You don't have access to the admin panel");
         }

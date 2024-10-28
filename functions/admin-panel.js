@@ -7,10 +7,10 @@ let users = {
 function populateUsers() {
     const userTableBody = document.getElementById('userTableBody');
     userTableBody.innerHTML = '';
-    for (let id in users) {
+    Object.keys(users).forEach(id => {
         const user = users[id];
         userTableBody.innerHTML += `
-            <tr>
+            <tr id="user-${id}">
                 <td>${user.email}</td>
                 <td contenteditable="true">${user.firstName}</td>
                 <td contenteditable="true">${user.lastName}</td>
@@ -22,22 +22,23 @@ function populateUsers() {
                 </td>
             </tr>
         `;
-    }
+    });
 }
 
 function editUser(id) {
-    const rows = document.querySelectorAll(`#userTableBody tr:nth-child(${id + 1}) td`);
-    users[id].firstName = rows[1].innerText;
-    users[id].lastName = rows[2].innerText;
-    users[id].email = rows[3].innerText;
-    users[id].password = rows[4].innerText;
-    alert('User updated successfully');
+    const row = document.querySelector(`#user-${id}`).children;
+    users[id].firstName = row[1].innerText.trim();
+    users[id].lastName = row[2].innerText.trim();
+    users[id].email = row[3].innerText.trim();
+    users[id].password = row[4].innerText.trim();
+    alert('User data updated successfully!');
+    populateUsers();
 }
 
 function deleteUser(id) {
     if (confirm('Are you sure you want to delete this user?')) {
         delete users[id];
-        populateUsers();  // Refresh the table
+        populateUsers();
     }
 }
 
