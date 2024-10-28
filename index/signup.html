@@ -6,111 +6,26 @@
     <title>Sign Up</title>
     <style>
         body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin: 0; padding: 0; height: 100%;
+            display: flex; justify-content: center; align-items: center;
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
         }
-
         .signup-container {
             background-color: rgba(0, 0, 0, 0.7);
-            padding: 40px;
-            border-radius: 10px;
-            width: 350px;
-            text-align: center;
+            padding: 40px; border-radius: 10px; width: 350px; text-align: center;
         }
-
-        .signup-container input[type="text"],
-        .signup-container input[type="password"],
-        .signup-container input[type="email"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
+        .signup-container input[type="text"], .signup-container input[type="password"], .signup-container input[type="email"] {
+            width: 100%; padding: 10px; margin: 10px 0;
+            border: none; border-radius: 5px;
         }
-
         .signup-container button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-            background-color: #22c7e0;
-            color: white;
-            cursor: pointer;
+            width: 100%; padding: 10px; margin: 10px 0;
+            border: none; border-radius: 5px;
+            background-color: #22c7e0; color: white; cursor: pointer;
         }
-
-        .signup-container button:hover {
-            background-color: #1abdd6;
-        }
-
-        .signup-container a {
-            color: white;
-            display: block;
-            margin-top: 10px;
-        }
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #6dd5ed, #2193b0);
-        }
-
-        .login-container {
-            background-color: #ffffffdd;
-            padding: 40px;
-            border-radius: 15px;
-            width: 350px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .login-container h2 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .login-container input[type="email"],
-        .login-container input[type="password"] {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            outline: none;
-        }
-
-        .login-container button {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-            background-color: #2193b0;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .login-container button:hover {
-            background-color: #1e6f8e;
-        }
-
-        .login-container a {
-            color: #2193b0;
-            font-size: 14px;
-            text-decoration: none;
-            margin-top: 10px;
-        }
+        .signup-container button:hover { background-color: #1abdd6; }
+        .signup-container a { color: white; display: block; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -127,12 +42,6 @@
 </div>
 
 <script>
-    let users = {
-        0: {firstName: 'Yerkhan', lastName: 'Akhmet', email: 'yerkhan@gmail.com', password: '3319', role: 'admin'},
-        1: {firstName: 'Bakhtiyar', lastName: 'Baizulla', email: 'bakhtiyar@gmail.com', password: '3319', role: 'admin'},
-        2: {firstName: 'Ernar', lastName: 'Kassen', email: 'ernar@gmail.com', password: '3319', role: 'admin'}
-    };
-
     function User(firstName, lastName, email, password, role = 'user') {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -141,8 +50,15 @@
         this.role = role;
     }
 
-    function createId(users) {
-        return Object.keys(users).length;
+    function loadUsers() {
+        return JSON.parse(localStorage.getItem('users')) || {};
+    }
+
+    function saveUser(user) {
+        const users = loadUsers();
+        const userId = Object.keys(users).length;
+        users[userId] = user;
+        localStorage.setItem('users', JSON.stringify(users));
     }
 
     document.getElementById('signUpForm').addEventListener('submit', (e) => {
@@ -154,13 +70,11 @@
         const password = document.getElementById('password').value;
 
         if (firstName && lastName && email && password) {
-            const user = new User(firstName, lastName, email, password);
-
-            const userId = createId(users);
-            users[userId] = user;
+            const newUser = new User(firstName, lastName, email, password);
+            saveUser(newUser);
 
             alert(`User ${firstName} successfully registered`);
-            console.log(users);
+            window.location.href = 'properties-pavilion-en.html';
         } else {
             alert('Please fill out all fields');
         }

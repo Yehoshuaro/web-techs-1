@@ -17,8 +17,8 @@ document.getElementById('signInForm').addEventListener('submit', (e) => {
 
         if (user.role === 'admin') {
             window.location.href = 'admin-panel.html';
-        } else {
-            alert("You don't have access to the admin panel");
+        } else if (user.role === 'user') {
+            window.location.href = "properties-pavilion-en.html";
         }
     } else {
         alert('Invalid email or password');
