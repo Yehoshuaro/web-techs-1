@@ -192,9 +192,7 @@ body {
 
 .nav-item{
     display: flex;
-}
-.nav-item button{
-    border-right: 10px;
+    margin-right: 10px;
 }
 
 /* Dark mode styles */
