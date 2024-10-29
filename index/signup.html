@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+        }
+
+        .signup-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px 40px;
+            border-radius: 10px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .signup-container h2 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .signup-container input[type="text"],
+        .signup-container input[type="password"],
+        .signup-container input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: #333;
+        }
+
+        .signup-container button {
+            width: 100%;
+            padding: 12px;
+            margin: 20px 0 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #22c7e0;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-container button:hover {
+            background-color: #1abdd6;
+        }
+
+        .signup-container a {
+            color: #22c7e0;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .signup-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+<div class="signup-container">
+    <h2 style="color:white">Sign Up</h2>
+    <form id="signUpForm">
+        <input type="text" id="firstName" placeholder="Enter First Name" required>
+        <input type="text" id="lastName" placeholder="Enter Last Name" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <button type="submit">Sign Up</button>
+        <a href="signin.html">Already have an account? Sign In</a>
+    </form>
+</div>
+
+<script>
+    function User(firstName, lastName, email, password, role = 'user') {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.role = role;
+    }
+
+    function loadUsers() {
+        return JSON.parse(localStorage.getItem('users')) || {};
+    }
+
+    function saveUser(user) {
+        const users = loadUsers();
+        const userId = Object.keys(users).length;
+        users[userId] = user;
+        localStorage.setItem('users', JSON.stringify(users));
+    }
+
+    document.getElementById('signUpForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        if (firstName && lastName && email && password) {
+            const newUser = new User(firstName, lastName, email, password);
+            saveUser(newUser);
+
+            alert(`User ${firstName} successfully registered`);
+            window.location.href = 'properties-pavilion-en.html';
+        } else {
+            alert('Please fill out all fields');
+        }
+    });
+</script>
+</body>
+</html>
