@@ -35,3 +35,6 @@ document.getElementById('signUpForm').addEventListener('submit', (e) => {
         alert('Please fill out all fields');
     }
 });
+
+
+

@@ -23,4 +23,5 @@ document.getElementById('signInForm').addEventListener('submit', (e) => {
     } else {
         alert('Invalid email or password');
     }
+
 });
