@@ -34,4 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.toggle('dark-mode');
         toggleThemeButton.textContent = document.body.classList.contains('dark-mode') ? 'Light Theme' : 'Dark Theme';
     });
+
 });
+
