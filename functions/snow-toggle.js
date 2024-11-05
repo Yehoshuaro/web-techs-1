@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggleThemeButton = document.getElementById('toggle-theme');
 
     toggleThemeButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-        toggleThemeButton.textContent = document.body.classList.contains('dark-theme') ? 'Light Theme' : 'Dark Theme';
+        document.body.classList.toggle('dark-mode');
+        toggleThemeButton.textContent = document.body.classList.contains('dark-mode') ? 'Light Theme' : 'Dark Theme';
     });
 });

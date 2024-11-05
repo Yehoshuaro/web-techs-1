@@ -3,3 +3,4 @@ document.getElementById('darkModeToggle').addEventListener('click', function () 
 
     this.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
 });
+
