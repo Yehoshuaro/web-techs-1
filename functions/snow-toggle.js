@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+
     const toggleThemeButton = document.getElementById('toggle-theme');
 
     toggleThemeButton.addEventListener('click', () => {
