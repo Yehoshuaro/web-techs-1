@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const formFields = document.querySelectorAll('input[type="email"], input[type="tel"], input[type="text"], input[type="number"], input[type="radio"]');
+    const formFields = document.querySelectorAll('input[type="email"], input[type="tel"], input[type="text"], input[type="number"], input[type="radio"], input[type="checkbox"]');
     const progressBar = document.getElementById('progress-bar');
     const submitButton = document.querySelector('input[type="submit"]');
 
@@ -10,25 +10,23 @@ document.addEventListener('DOMContentLoaded', () => {
         let completedFields = 0;
 
         formFields.forEach(field => {
-            if ((field.type === "radio" && field.checked) || (field.type !== "radio" && field.value.trim() !== "")) {
+            if ((field.type === "radio" && field.checked) ||
+                (field.type === "checkbox" && field.checked) ||
+                (field.type !== "radio" && field.type !== "checkbox" && field.value.trim() !== "")) {
                 completedFields++;
             }
         });
 
-        const progress = (completedFields / (formFields.length - 1)) * 100;
+        const progress = (completedFields / (formFields.length)) * 100; // Adjusted to include all fields
         progressBar.style.width = `${progress}%`;
         progressBar.innerText = `${Math.round(progress)}%`;
 
         // Enable submit button if all required fields are filled
-        submitButton.disabled = completedFields < formFields.length - 1; // Subtract 1 for the comment field
+        submitButton.disabled = completedFields < formFields.length; // No need to subtract for comments
     }
 
     formFields.forEach(field => {
         field.addEventListener('input', updateProgress);
-    });
-
-    document.querySelectorAll('input[type="radio"]').forEach(radio => {
-        radio.addEventListener('change', updateProgress);
     });
 
     const themeToggleBtn = document.createElement('button');
@@ -37,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggleBtn.innerText = 'Toggle Theme';
     document.querySelector('.navbar .container-fluid').appendChild(themeToggleBtn);
 
-    // Create a new <style> element for placeholder color
     const style = document.createElement('style');
     style.innerHTML = `
         input::placeholder,
@@ -101,8 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('a').forEach(a => {
                 a.style.color = '#ffffff';
             });
-            document.querySelectorAll('h2').forEach(a => {
-                a.style.color = '#ffffff';
+            document.querySelectorAll('h2').forEach(h2 => {
+                h2.style.color = '#ffffff';
             });
             document.querySelector('footer').style.backgroundColor = '#1e1e1e';
             document.querySelector('footer').style.color = '#ffffff';
@@ -112,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.container').style.backgroundColor = '#1e1e1e';
             document.querySelector('h1').style.color = '#ffffff';
             document.querySelector('.sell-form').style.backgroundColor = '#3e3e3e';
-            document.querySelector('#logo').src = '../images/dark-logo.png';
             themeToggleBtn.innerText = 'Light Theme'; // Change button text
         } else {
             // Light theme styles
@@ -131,8 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('a').forEach(a => {
                 a.style.color = '#000';
             });
-            document.querySelectorAll('h2').forEach(a => {
-                a.style.color = '#000';
+            document.querySelectorAll('h2').forEach(h2 => {
+                h2.style.color = '#000';
             });
             document.querySelector('footer').style.backgroundColor = '#fff';
             document.querySelector('footer').style.color = '#000';
@@ -142,7 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.container').style.backgroundColor = '#fff';
             document.querySelector('h1').style.color = '#000';
             document.querySelector('.sell-form').style.backgroundColor = '#fff';
-            document.querySelector('#logo').src = '../images/light-logo.png';
             themeToggleBtn.innerText = 'Toggle Theme'; // Change button text back
         }
     });
@@ -208,9 +203,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Listen for the form submission
-    document.querySelector('form.sell-form').addEventListener('submit', (e) => {
+    document.querySelector('form').addEventListener('submit', (e) => {
         e.preventDefault(); // Prevent the default form submission
         dialog.style.display = 'flex'; // Show the dialog
     });
 });
-

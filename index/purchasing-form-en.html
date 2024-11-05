@@ -11,13 +11,14 @@
           integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet">
+
 </head>
 <body>
-<header class="bg-white shadow-sm sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+<header class="shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="properties-pavilion-en.html">
-                <img src="../images/light-logo.png" alt="Logo" class="img-fluid" style="max-height: 100px;">
+                <img id="logo" src="../images/light-logo.png" alt="Logo" class="img-fluid" style="max-height: 100px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,22 +26,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="properties-pavilion-en.html#about-us">About Us</a>
+                        <a class="nav-link" href="properties-pavilion-en.html#about-us">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="properties-pavilion-en.html#Services">Services</a>
+                        <a class="nav-link" href="properties-pavilion-en.html#Services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="properties-pavilion-en.html#Contacts">Contacts</a>
+                        <a class="nav-link" href="properties-pavilion-en.html#Contacts">Contacts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="faq-en.html">FAQ</a>
+                        <a class="nav-link" href="faq-en.html">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="properties-pavilion-ru.html"><i class="flag-icon flag-icon-ru"></i>Rus</a>
+                        <a class="nav-link" href="properties-pavilion-ru.html"><i class="flag-icon flag-icon-ru"></i>Rus</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="properties-pavilion-kz.html"><i class="flag-icon flag-icon-kz"></i>Kaz</a>
+                        <a class="nav-link" href="properties-pavilion-kz.html"><i class="flag-icon flag-icon-kz"></i>Kaz</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -57,7 +58,10 @@
         <h1>Purchasing Form</h1>
     </section>
 
-    <form action="submit" class="row g-3">
+    <form action="submit" class="sell-form row g-3">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 0%" id="progress-bar"></div>
+        </div>
         <section class="col-sm-12 col-md-6 col-lg-4 mx-auto">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" name="email" id="email" placeholder="Your email">
@@ -70,7 +74,7 @@
         </section>
 
         <section class="col-sm-12 col-md-6 col-lg-4 mx-auto">
-            <h2 class="mb-3">Choose type of residence</h2>
+            <h2 class="mb-3">What type of residence you are selling?</h2>
             <div class="d-flex justify-content-around">
                 <div class="form-check d-flex align-items-center justify-content-center">
                     <input type="radio" class="form-check-input" name="options" id="house" value="1">
@@ -90,70 +94,35 @@
         </section>
 
         <section class="col-sm-12 col-md-6 col-lg-4 mx-auto">
-            <h2 class="mb-3">Desired area range</h2>
+            <h2 class="mb-3">What is Your area?</h2>
             <div class="d-flex justify-content-around flex-column">
                 <div>
-                    <label for="desired-area-min" class="form-label">From</label>
-                    <input type="number" class="form-control" name="desired-area-min" id="desired-area-min" step="0.01" placeholder="Min, sq m">
-                </div>
-                <div>
-                    <label for="desired-area-max" class="form-label">To</label>
-                    <input type="number" class="form-control" name="desired-area-max" id="desired-area-max" step="0.01" placeholder="Max, sq m">
+                    <input type="number" class="form-control" name="desired-area-min" id="desired-area-min" step="0.01" placeholder="sq m">
                 </div>
             </div>
         </section>
 
         <section class="col-sm-12 col-md-6 col-lg-4 mx-auto">
-            <h2 class="mb-3">How many rooms do you want?</h2>
-            <div class="d-flex justify-content-center flex-row">
-                <label class="form-check">
-                    <input type="checkbox" class="form-check-input" name="rooms" value="1">
-                    1
-                </label>
-                <label class="form-check">
-                    <input type="checkbox" class="form-check-input" name="rooms" value="2">
-                    2
-                </label>
-                <label class="form-check">
-                    <input type="checkbox" class="form-check-input" name="rooms" value="3">
-                    3
-                </label>
-                <label class="form-check">
-                    <input type="checkbox" class="form-check-input" name="rooms" value="4">
-                    4
-                </label>
-                <label class="form-check">
-                    <input type="checkbox" class="form-check-input" name="rooms" value="5">
-                    5
-                </label>
-                <label class="form-check">
-                    <input type="checkbox" class="form-check-input" name="rooms" value="6">
-                    6
-                </label>
-                <label class="form-check">
-                    <input type="checkbox" class="form-check-input" name="rooms" value="7+">
-                    7+
-                </label>
+            <h2 class="mb-3">Rooms</h2>
+            <div class="d-flex justify-content-around flex-column">
+                <div>
+                    <input type="number" class="form-control" name="desired-area-min" id="rooms" step="1" placeholder="Number of rooms">
+                </div>
             </div>
         </section>
 
         <section class="col-sm-12 col-md-6 col-lg-4 mx-auto">
-            <h2 class="mb-3">Desired price range</h2>
+            <h2 class="mb-3">Price</h2>
             <div class="d-flex justify-content-around flex-column">
                 <div>
-                    <label for="desired-price-min" class="form-label">From</label>
-                    <input type="number" class="form-control" name="desired-price" id="desired-price-min" step="0.01" placeholder="Min, USD $">
-                </div>
-                <div>
-                    <label for="desired-price-max" class="form-label">To</label>
-                    <input type="number" class="form-control" name="desired-price" id="desired-price-max" step="0.01" placeholder="Max, USD $">
+                    <input type="number" class="form-control" name="desired-price" id="desired-price-min" step="0.01" placeholder="USD $">
                 </div>
             </div>
         </section>
 
         <section class="col-sm-12 col-md-6 col-lg-4 mx-auto">
             <label for="comment" class="form-label">Comments</label>
-            <textarea class="form-control" id="comment" name="comment" rows="6" placeholder="Leave your comment"></textarea>
+            <textarea class="form-control" id="comment" name="comment" rows="3" placeholder="Leave your comment"></textarea>
         </section>
 
         <div class="col-12 text-center">
@@ -164,7 +133,7 @@
 
 <hr>
 
-<footer class="footer bg-light text-center py-4">
+<footer class="footer text-center py-4">
     <h2>PP License</h2>
     <p>Properties Pavilion Properties is a fully integrated real estate brokerage firm registered in Astana, Kazakhstan...</p>
     <p>Created by: Yerkhan Akhmet, Bakhtiyar Baizulla, Ernar Kassen</p>
@@ -177,6 +146,6 @@
     <p>© 2024 Properties Pavilion. All Rights Reserved</p>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="../functions/forms.js"></script>
 </body>
 </html>
