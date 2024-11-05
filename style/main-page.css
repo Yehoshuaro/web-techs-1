@@ -495,40 +495,8 @@ hr {
 }
 
 
-
-body.dark-theme {
-    background-color: #121212;
-    color: #ffffff;
-}
-.dark-theme .navbar, .dark-theme .footer, .dark-theme .home-container, .dark-theme .benefits-section, .dark-theme section, .dark-theme blockquote {
-    background-color: #1e1e1e;
-    color: #ffffff;
-}
-.dark-theme .nav-link {
-    color: #ffffff !important;
-}
-.dark-theme .btn-outline-primary {
-    color: #ffffff;
-    border-color: #ffffff;
-}
-.dark-theme .btn-outline-success {
-    color: #ffffff;
-    border-color: #ffffff;
-}
-
-.dark-theme .card {
-    background-color: #2a2a2a;
-    color: #ffffff;
-    border: none;
-}
 body {
     transition: background-color 0.5s, color 0.5s;
-}
-.dark-theme .btn-outline-primary:hover,
-.dark-theme .btn-outline-success:hover {
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 
@@ -573,4 +541,162 @@ form .btn-outline-primary:hover {
 form .btn-outline-success:hover {
     background-color: #28a745;
     color: #fff;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+body.dark-mode .nav-item button {
+    background-color: #1f1f1f;
+}
+
+/* Header and Navbar Dark Mode */
+
+body.dark-mode .navbar,
+body.dark-mode .bg-white {
+    background-color: #1f1f1f !important;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar-brand img {
+    filter: invert(0.88);
+}
+
+body.dark-mode .navbar-toggler-icon {
+    filter: invert(0.88);
+}
+
+body.dark-mode .navbar-nav .nav-link {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .navbar-nav .nav-link:hover {
+    color: #bbbbbb !important;
+}
+
+/* Main Text Container */
+body.dark-mode .main-text-container {
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+/* FAQ Question Container */
+body.dark-mode .question-container details {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+body.dark-mode .question-container summary {
+    color: #e0e0e0;
+}
+
+body.dark-mode .question-container summary:hover {
+    color: #ffffff;
+}
+
+body.dark-mode .question-container summary::after {
+    background-color: #3498db;
+}
+
+body.dark-mode .question-container p {
+    color: #bbbbbb;
+}
+body.dark-mode summary::after {
+    filter: invert(0.88);
+}
+
+/* Footer */
+body.dark-mode .footer {
+    background-color: #1f1f1f !important;
+    color: #e0e0e0;
+}
+body.dark-mode .main-text-container {
+    background-color: #1f1f1f !important;
+}
+body.dark-mode .text-center {
+    color: #e0e0e0;
+}
+
+body.dark-mode .footer h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .footer p,
+body.dark-mode .footer-text-container p,
+body.dark-mode .footer-text-container a {
+    color: #bbbbbb !important;
+}
+
+body.dark-mode .footer-text-container a:hover {
+    color: #ffffff;
+}
+
+/* Social Icons */
+body.dark-mode .fa-square-envelope,
+body.dark-mode .fa-square-instagram,
+body.dark-mode .fa-square-x-twitter,
+body.dark-mode .fa-square-youtube {
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark-mode .fa-square-envelope:hover,
+body.dark-mode .fa-square-instagram:hover,
+body.dark-mode .fa-square-x-twitter:hover,
+body.dark-mode .fa-square-youtube:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* Search Bar and Buttons */
+body .form-control {
+    transition: 0.3s;
+}
+body.dark-mode .form-control {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
+body.dark-mode .btn-outline-primary {
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode .btn-outline-primary:hover {
+    background-color: #555;
+    color: #ffffff;
+}
+
+/* Divider Line */
+body.dark-mode hr {
+    background-color: #444;
+}
+
+body.dark-mode .card {
+    background-color: #181818; /* Dark background for body */
+    color: #e0e0e0; /* Light text color for the entire page */
+}
+
+body.dark-mode .card-img-top {
+    filter: invert(0.88);
+}
+
+body.dark-mode .section::before{
+    filter: brightness(0.1);
+}
+body.dark-mode h2, body.dark-mode p{
+    color: #a3a6a6;
+}
+
+body.dark-mode .Services {
+    background-color: #181818;
+    opacity: 0;
+}
+
+body.dark-mode .container {
+    background-color: #181818;
 }
